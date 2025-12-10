@@ -7,6 +7,7 @@ type Language = 'fr' | 'en' | 'es'
 interface LanguageContextType {
   language: Language
   toggleLanguage: () => void
+  setLanguage: (lang: Language) => void
   t: (key: string) => string
 }
 
@@ -242,9 +243,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return translations[language][key as keyof typeof translations.fr] || key
   }
 
+  const setLanguageHandler = (lang: Language) => {
+    setLanguage(lang)
+  }
+
   // Toujours retourner le Provider, même avant le montage
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage: setLanguageHandler, t }}>
       {children}
     </LanguageContext.Provider>
   )
