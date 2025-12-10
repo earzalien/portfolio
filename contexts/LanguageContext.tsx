@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from 'react'
 
-type Language = 'fr' | 'en'
+type Language = 'fr' | 'en' | 'es'
 
 interface LanguageContextType {
   language: Language
@@ -144,6 +144,71 @@ const translations = {
     'footer.created': 'Created with',
     'footer.hosted': 'Hosted on',
   },
+  es: {
+    // Navigation
+    'nav.home': 'Inicio',
+    'nav.about': 'Sobre mí',
+    'nav.skills': 'Habilidades',
+    'nav.projects': 'Proyectos',
+    'nav.contact': 'Contacto',
+    
+    // Hero
+    'hero.title': 'Kevin Ressegaire',
+    'hero.subtitle': 'Desarrollador Full-Stack',
+    'hero.description': 'Apasionado por la creación de sitios web. Motivado, curioso, siempre listo para nuevos desafíos.',
+    'hero.cta': 'Descubrir mi perfil',
+    
+    // About
+    'about.title': 'Sobre mí',
+    'about.subtitle': '¿Quién soy?',
+    'about.p1': 'Desarrollador Web y Web Móvil (DWWM) nivel 5, especializado en la creación de aplicaciones web modernas y eficientes. Formado en Wild Code School, domino las tecnologías frontend y backend para diseñar soluciones completas e innovadoras.',
+    'about.p2': 'Desarrollo aplicaciones web con',
+    'about.p3': ',',
+    'about.p4': ', Node.js, PostgreSQL y otras tecnologías modernas. Mi enfoque combina rigor técnico, atención al detalle y calidad del código para entregar productos robustos y mantenibles.',
+    'about.p5': 'Apasionado por el desarrollo web, busco oportunidades para poner mis habilidades al servicio de proyectos estimulantes. Estoy listo para unirme a un equipo dinámico y contribuir al éxito de sus proyectos.',
+    'about.certification': 'Certificación',
+    'about.certificationDesc': 'DWWM Nivel 5',
+    'about.experience': 'Experiencia',
+    'about.experienceDesc': 'Proyectos variados',
+    'about.available': 'Disponible',
+    'about.availableDesc': 'Búsqueda activa',
+    
+    // Skills
+    'skills.title': 'Habilidades',
+    'skills.subtitle': 'Lo que aporto',
+    'skills.frontend': 'Frontend',
+    'skills.backend': 'Backend',
+    'skills.tools': 'Herramientas',
+    'skills.softSkills': 'Habilidades blandas',
+    
+    // Projects
+    'projects.title': 'Proyectos',
+    'projects.subtitle': 'Lo que he creado',
+    'projects.websiteMultilang': 'Gestor multilingüe simple para sitios web estáticos. Plantilla reutilizable para crear sitios multilingües fácilmente.',
+    'projects.sassenach': 'Fansite sobre la serie Outlander, realizado por 4 personas para el proyecto P1 en Wild Code School. Sitio vitrina con diseño moderno y responsive.',
+    'projects.portfolio': 'Este sitio portfolio. Desarrollado con Next.js, TypeScript y Tailwind CSS. Diseño moderno con animaciones fluidas.',
+    'projects.code': 'Código',
+    'projects.demo': 'Demo',
+    'projects.allProjects': 'Todos mis proyectos están disponibles en GitHub',
+    'projects.viewAll': 'Ver todos mis proyectos',
+    
+    // Contact
+    'contact.title': 'Contáctame',
+    'contact.subtitle': '¿Hablamos?',
+    'contact.description': 'Siempre estoy abierto a discutir nuevos proyectos, oportunidades de colaboración o simplemente intercambiar sobre desarrollo web. ¡No dudes en contactarme!',
+    'contact.email': 'Email',
+    'contact.location': 'Ubicación',
+    'contact.locationValue': 'Francia',
+    'contact.education': 'Formación',
+    'contact.educationValue': 'Wild Code School',
+    'contact.status': 'Estado',
+    'contact.statusValue': 'Desarrollador Full-Stack',
+    
+    // Footer
+    'footer.rights': 'Todos los derechos reservados.',
+    'footer.created': 'Creado con',
+    'footer.hosted': 'Alojado en',
+  },
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
@@ -166,7 +231,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [language, mounted])
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'fr' ? 'en' : 'fr'))
+    setLanguage((prev) => {
+      if (prev === 'fr') return 'en'
+      if (prev === 'en') return 'es'
+      return 'fr'
+    })
   }
 
   const t = (key: string): string => {
