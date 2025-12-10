@@ -28,6 +28,7 @@ const skills = {
 const softSkills = {
   fr: ['Motivation', 'Curiosité', 'Adaptabilité', 'Travail d\'équipe', 'Rigueur'],
   en: ['Motivation', 'Curiosity', 'Adaptability', 'Teamwork', 'Rigor'],
+  es: ['Motivación', 'Curiosidad', 'Adaptabilidad', 'Trabajo en equipo', 'Rigor'],
 }
 
 export default function Skills() {
