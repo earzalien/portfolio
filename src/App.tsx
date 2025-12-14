@@ -42,9 +42,9 @@ type Project = {
 
 const copy = {
   heroKicker: {
-    FR: 'Développeur Fullstack • Montélimar',
-    EN: 'Fullstack Developer • Montélimar',
-    ES: 'Desarrollador Fullstack • Montélimar',
+    FR: 'Développeur Fullstack ',
+    EN: 'Fullstack Developer',
+    ES: 'Desarrollador Fullstack',
   },
 heroSubtitlePrefix: {
   FR: 'De l\'hôtellerie 4★ au développement, mon standard reste le même : l\'exigence à chaque ligne de code.',
@@ -93,9 +93,9 @@ heroSubtitlePrefix: {
     ES: 'Código',
   },
   footerMain: {
-    FR: 'Créé avec ❤️ en React + Vite',
-    EN: 'Built with ❤️ using React + Vite',
-    ES: 'Creado con ❤️ con React + Vite',
+    FR: 'Créé en React + Vite',
+    EN: 'Built using React + Vite',
+    ES: 'Creado con React + Vite',
   },
   footerSub: {
     FR: '© 2025 Kévin Ressegaire | Développeur Fullstack',
@@ -241,7 +241,7 @@ function App() {
             <p className="hero-kicker">{copy.heroKicker[lang]}</p>
 
             <h1 className="hero-title">
-              KEVIN <span className="hero-title-dot">.</span>
+              KEVIN RESSEGAIRE<span className="hero-title-dot">.</span>
             </h1>
 
             <p className="hero-subtitle">
