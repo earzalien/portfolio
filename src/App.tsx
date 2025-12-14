@@ -381,7 +381,7 @@ function App() {
           </div>
         </div>
       </section>
-
+<Analytics/>
       {/* Footer */}
       <footer className="site-footer">
         <div className="site-footer-inner">
