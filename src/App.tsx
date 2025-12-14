@@ -28,6 +28,18 @@ import {
 } from 'react-icons/si'
 import { FaSchool } from 'react-icons/fa'
 
+type ProjectId = 'cinemood' | 'mini'
+
+type Lang = 'FR' | 'EN' | 'ES'
+
+type Project = {
+  id: ProjectId
+  preview: string
+  tech: string[]
+  link: string
+  github: string
+}
+
 const copy = {
   heroKicker: {
     FR: 'Développeur Fullstack • Montélimar',
@@ -102,7 +114,7 @@ heroSubtitlePrefix: {
         EN: 'Mini Fullstack Project',
         ES: 'Mini proyecto Fullstack',
       },
-    },
+    } satisfies Record<ProjectId, Record<Lang, string>>,
     descriptions: {
       cinemood: {
         FR: 'App de recommandations films React/TS + Express',
@@ -114,7 +126,7 @@ heroSubtitlePrefix: {
         EN: 'REST API + Vite frontend with authentication',
         ES: 'API REST + frontend Vite con autenticación',
       },
-    },
+    } satisfies Record<ProjectId, Record<Lang, string>>,
   },
 } as const
 
@@ -146,10 +158,10 @@ const stack = [
   { name: 'Husky', Icon: SiNpm },
 ]
 
-const projects = [
+const projects: Project[] = [
   {
     id: 'cinemood',
-    preview: '/previews/cinemood.png',
+    preview: '/previews/cinemood.jpg',
     tech: ['React', 'TypeScript', 'Express', 'SQL', 'Vercel'],
     link: 'https://cinemood-ebon.vercel.app',
     github: 'https://github.com/earzalien/cinemood',
@@ -162,6 +174,7 @@ const projects = [
     github: 'https://github.com/tonusername/mini-projet',
   },
 ]
+
 
 
 
