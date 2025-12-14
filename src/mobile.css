@@ -1,0 +1,132 @@
+@media (min-width: 768px) {
+  .navbar {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .hero-section {
+    padding-top: 7rem;
+  }
+
+  .hero-inner {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .hero-kicker {
+    font-size: 1rem;
+  }
+
+  .hero-title {
+    font-size: 3.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-subtitle-br {
+    display: block;
+  }
+
+  .hero-card {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .container-6xl {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .gallery-main {
+    float: right;
+    margin-left: 2rem;
+    max-width: 28rem;
+  }
+
+  .gallery-main-title {
+    font-size: 1.5rem;
+  }
+
+  .gallery-thumbs-wrapper {
+    display: block;
+  }
+
+  .projects-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .projects-title {
+    font-size: 3rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer-inner {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cv-link {
+    display: block;
+  }
+
+  .hero-inner {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .hero-text {
+    text-align: left;
+    order: 1;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+  }
+
+  .hero-badges {
+    justify-content: flex-start;
+  }
+
+  .hero-visual {
+    justify-content: flex-end;
+    order: 2;
+  }
+
+  .hero-card {
+    width: 24rem;
+    height: 24rem;
+  }
+
+  .gallery-thumbs-row {
+    justify-content: flex-end;
+  }
+
+  .gallery-main {
+    max-width: 32rem;
+  }
+
+  .gallery-thumb {
+    width: 7rem;
+    height: 9rem;
+  }
+
+  .projects-title {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery-mobile-nav {
+    display: none;
+  }
+}
