@@ -161,15 +161,15 @@ const stack = [
 const projects: Project[] = [
   {
     id: 'cinemood',
-    preview: '/previews/cinemood.jpg',
-    tech: ['React', 'TypeScript', 'Express', 'SQL', 'Vercel'],
+    preview: '/previews/cinemood.png',
+    tech: ['React', 'TypeScript', 'Vercel'],
     link: 'https://cinemood-ebon.vercel.app',
     github: 'https://github.com/earzalien/cinemood',
   },
   {
     id: 'mini',
     preview: '/previews/mini-fullstack.jpg',
-    tech: ['Vite', 'Node.js', 'TypeScript', 'Tailwind'],
+    tech: ['Vite', 'Node.js', 'TypeScript'],
     link: '#',
     github: 'https://github.com/tonusername/mini-projet',
   },
@@ -241,7 +241,7 @@ function App() {
             <p className="hero-kicker">{copy.heroKicker[lang]}</p>
 
             <h1 className="hero-title">
-              KÉVIN <span className="hero-title-dot">.</span>
+              KEVIN <span className="hero-title-dot">.</span>
             </h1>
 
             <p className="hero-subtitle">
