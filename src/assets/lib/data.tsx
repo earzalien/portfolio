@@ -27,9 +27,6 @@ import hemangicon2 from "../../assets/img/kevin-ressegaire.png"
 import zemprofiles from "../../assets/icons/zemprofiles.png"
 import youtubeicon from "../../assets/icons/youtubeicon.png"
 import zempostsicon from "../../assets/icons/zemposts.png"
-import zemshowcase from "../../assets/icons/zemshowcase.png"
-import astroicon from "../../assets/icons/astroicon.png"
-import zemdocs from "../../assets/icons/zemdocs.png"
 import phpicom from "../../assets/icons/php.png";
 import postgresqlicon from "../../assets/icons/postgre.png";
 import mysqlicon from "../../assets/icons/mysql.png";
@@ -74,19 +71,18 @@ export const projectsData = [
   {
     title: "CineMood",
     description:
-      "Posten und vernetzen Sie sich mit Entwicklern",
+      "Application de recommandations de films personnalisées.",
     description_EN:
-      "Post & Connect with Developers",
+      "Personalized movie recommendation web app.",
     technologies: [
       { name: "JavaScript", icon: javascripticon },
       { name: "TypeScript", icon: typescripticon},
       { name: "NodeJS", icon: nodejsicon},
-      { name: "ReactJS", icon: reacticon},
-      { name: "Astro", icon: astroicon}
+      { name: "ReactJS", icon: reacticon}
       ],
       image: zempostsicon,
-      deploymenturl: "https://zemposts.vercel.app",
-      githuburl: "https://github.com/Zemerik/ZemPosts",
+      deploymenturl: "https://cinemood-ebon.vercel.app/",
+      githuburl: "https://github.com/earzalien/cinemood",
       githubicon: FiGithub,
       deploymenticon: FiLink,
       colors: {
@@ -97,11 +93,11 @@ export const projectsData = [
       },
     },  
   {
-    title: "ZemProfiles",
+    title: "Outlander",
     description:
-      "Entdecken und vernetzen Sie sich mit Entwicklern",
+      "Fansite Outlander multilingue (FR/ES/EN) réalisé en équipe.",
     description_EN:
-      "Discover & Conect with Developers",
+      "Multilingual Outlander fan website (FR/ES/EN) built as a team project.",
       technologies: [
         { name: "JavaScript", icon: javascripticon },
         { name: "Typescript", icon: typescripticon },
@@ -109,9 +105,9 @@ export const projectsData = [
         { name: "ReactJS", icon: reacticon},
       ],
       image: zemprofiles,
-      deploymenturl: "https://zemprofiles.vercel.app",
+      deploymenturl: "https://earzalien.github.io/sassenach/",
       githuburl:
-        "https://github.com/Zemerik/zemprofiles",
+        "https://github.com/earzalien/sassenach",
       githubicon: FiGithub,
       deploymenticon: FiLink,
       colors: {
@@ -120,7 +116,7 @@ export const projectsData = [
         icon: "white",
         projectcolor: "#FFD5BD",
       },
-    },
+    },/*
     {
       title: "ZemDocs",
       description: 
@@ -169,7 +165,7 @@ export const projectsData = [
         icon: "white",
         projectcolor: "#E3964A",
       },
-    },
+    },*/
 ] as const;
 
 export const liveTickerData = {
@@ -537,8 +533,8 @@ export const toastMessages = {
     en: "🦄 Thank you for your email. I will get back to you as soon as possible.",
   },
   failedEmailSent: {
-    fr: "🦄 L’envoi de votre email n’a pas fonctionné. Veuillez réessayer plus tard ou écrire à kevin.ressegaire@example.com.",
-    en: "🦄 Unfortunately the sending of your email did not work. Please try again later or email kevin.ressegaire@example.com.",
+    fr: "🦄 L’envoi de votre email n’a pas fonctionné. Veuillez réessayer plus tard ou écrire à kevin.ressegaire@gmail.com.",
+    en: "🦄 Unfortunately the sending of your email did not work. Please try again later or email kevin.ressegaire@gmail.com.",
   },
   failedValidationName: {
     fr: "Veuillez entrer votre nom",

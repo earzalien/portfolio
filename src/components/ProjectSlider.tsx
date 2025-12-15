@@ -27,7 +27,7 @@ const ProjectSlider: React.FC = () => {
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const notifyServerRequest = () => {
     if (language === "FR") {
-      toast.info(toastMessages.loadingProject.de);
+      toast.info(toastMessages.loadingProject.fr);
     } else {
       toast.info(toastMessages.loadingProject.en);
     }
