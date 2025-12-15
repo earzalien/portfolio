@@ -5,12 +5,5 @@
 </p>
 
 <h1 align = "center">
-
-  PORTFOLIO V2
-
+  PORTFOLIO
 </h1>
-
-<div align = "center">
-![Tools](https://skillicons.dev/icons?i=javascript,css,html,react,nodejs,typescript,vscode,vercel,github&perline=25)
-
-</div>
