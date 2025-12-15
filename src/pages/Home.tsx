@@ -5,6 +5,7 @@ import { useTheme } from "../context/theme-context";
 import { ScrollProgress } from "../components/ScrollProgress";
 import Divider from "../components/Divider";
 import ProjectSlider from "../components/ProjectSlider";
+import { Analytics } from "@vercel/analytics/next"
 
 const LazyBannerQuote = lazy(() => import("../components/BannerQuote"));
 const LazySiteBarRight = lazy(() => import("../components/SideBarRight"));
@@ -22,7 +23,7 @@ const Home: React.FC = () => {
     <>
       <Layout>
         <ThemeSwitch />
-        <header className="h-screen">
+        <header className="h-screen"><Analytics />
           <ScrollProgress
             position={"left"}
             color={"orange"}
