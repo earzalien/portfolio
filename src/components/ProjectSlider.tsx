@@ -25,23 +25,29 @@ const ProjectSlider: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   const notifyServerRequest = () => {
     if (language === "FR") {
       toast.info(toastMessages.loadingProject.fr);
+    } else if (language === "ES") {
+      toast.info(toastMessages.loadingProject.es);
     } else {
       toast.info(toastMessages.loadingProject.en);
     }
   };
 
+  const isFR = language === "FR";
+  const isES = language === "ES";
+
   return (
     <React.Fragment>
       <section
-        className=" skill-banner relative overflow-x-clip h-100% w-full flex flex-col gap-2 "
+        className="skill-banner relative overflow-x-clip h-100% w-full flex flex-col gap-2"
         id="projects"
         ref={ref}
       >
         <ToastContainer
-          className="w-max text-3xl block p-3 "
+          className="w-max text-3xl block p-3"
           position="bottom-center"
           autoClose={5000}
           hideProgressBar={false}
@@ -54,7 +60,7 @@ const ProjectSlider: React.FC = () => {
           theme="light"
         />
         <div
-          className="quote-outer-container bg-[--darkblue] -rotate-3 flex justify-center items-center scale-110 pt-32 pb-32 max-lg:pt-16 max-lg:pb-16 max-lg:-ml-44 max-lg:-mr-44 max-lg:scale-100 "
+          className="quote-outer-container bg-[--darkblue] -rotate-3 flex justify-center items-center scale-110 pt-32 pb-32 max-lg:pt-16 max-lg:pb-16 max-lg:-ml-44 max-lg:-mr-44 max-lg:scale-100"
           style={{
             backgroundImage: `url(${bannerBg})`,
             backgroundPosition: "center",
@@ -73,18 +79,28 @@ const ProjectSlider: React.FC = () => {
             >
               <p className="text-[--white] mt-16 mb-6">
                 <span className="text-[--orange]">&lt;</span>
-                {language === "FR" ? "Projets" : "Projects"}
+                {isFR
+                  ? "Projets"
+                  : isES
+                  ? "Proyectos"
+                  : "Projects"}
                 <span className="text-[--orange]">/&gt;</span>
               </p>
               <h2 className="text-[--white] mb-16">
-                {language === "FR" ? "Mes Projets" : "My Projects"}
+                {isFR
+                  ? "Mes Projets"
+                  : isES
+                  ? "Mis proyectos"
+                  : "My Projects"}
               </h2>
             </motion.div>
+
+            {/* Desktop Swiper */}
             <Swiper
               effect={"cards"}
               grabCursor={true}
               modules={[EffectCards, Autoplay, Pagination]}
-              className=" w-[60vw] max-lg:hidden min-[1921px]:px-96"
+              className="w-[60vw] max-lg:hidden min-[1921px]:px-96"
               loop={true}
               autoplay={{
                 delay: 4000,
@@ -98,19 +114,26 @@ const ProjectSlider: React.FC = () => {
               {projectsData.map((project, index: number) => (
                 <SwiperSlide
                   key={index}
-                  className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between  rounded-2xl p-20 text-left max-lg:hidden "
+                  className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between rounded-2xl p-20 text-left max-lg:hidden"
                 >
-                  <div className=" w-[55%] flex flex-col gap-12 justify-between ">
+                  <div className="w-[55%] flex flex-col gap-12 justify-between">
                     <h2>{project.title}</h2>
 
                     <p className="text-white">
-                      {language === "FR"
+                      {isFR
                         ? project.description
+                        : isES
+                        ? project.description_ES
                         : project.description_EN}
                     </p>
+
                     <div className="technologies">
                       <h3>
-                        {language === "FR" ? "Technologies" : "Technologies"}
+                        {isFR
+                          ? "Technologies"
+                          : isES
+                          ? "Tecnologías"
+                          : "Technologies"}
                       </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
                         {project.technologies.map(
@@ -119,7 +142,7 @@ const ProjectSlider: React.FC = () => {
                               key={innerIndex}
                               src={technology.icon}
                               alt={`${project.title}-icon`}
-                              className="h-[5rem] w-[60%] "
+                              className="h-[5rem] w-[60%]"
                               data-tooltip-id="my-tooltip"
                               data-tooltip-content={technology.name}
                             />
@@ -127,6 +150,7 @@ const ProjectSlider: React.FC = () => {
                         )}
                       </div>
                     </div>
+
                     <div className="buttons flex gap-10">
                       <Button
                         label="Live Demo"
@@ -135,6 +159,8 @@ const ProjectSlider: React.FC = () => {
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
                         onClick={notifyServerRequest}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       />
                       <Button
                         label="Github Repository"
@@ -142,6 +168,8 @@ const ProjectSlider: React.FC = () => {
                         iconSVG={project.githubicon}
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       />
                     </div>
                   </div>
@@ -150,17 +178,18 @@ const ProjectSlider: React.FC = () => {
                     <img
                       src={project.image}
                       alt={`${project.title}-project-mockup`}
-                      className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%] 
-                      `}
+                      className="w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%]"
                     />
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
+
+            {/* Mobile cards */}
             {projectsData.map((project, index: number) => (
               <article
                 key={index}
-                className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
+                className="bg-darkblue flex flex-col gap-10 w-[80%] h-full border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
                 <h2 className="text-white">{project.title}</h2>
                 <img
@@ -175,6 +204,9 @@ const ProjectSlider: React.FC = () => {
                     iconSVG={project.deploymenticon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
+                    onClick={notifyServerRequest}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   />
                   <Button
                     label="Github Repository"
@@ -182,17 +214,25 @@ const ProjectSlider: React.FC = () => {
                     iconSVG={project.githubicon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   />
                 </div>
-                <p className="text-white  max-lg:text-4xl">
-                  {language === "FR"
+                <p className="text-white max-lg:text-4xl">
+                  {isFR
                     ? project.description
+                    : isES
+                    ? project.description_ES
                     : project.description_EN}
                 </p>
 
                 <div className="technologies">
                   <h3 className="text-white">
-                    {language === "FR" ? "Technologien" : "Technologies"}
+                    {isFR
+                      ? "Technologies"
+                      : isES
+                      ? "Tecnologías"
+                      : "Technologies"}
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(
@@ -201,7 +241,7 @@ const ProjectSlider: React.FC = () => {
                           key={innerIndex}
                           src={technology.icon}
                           alt={`${project.title}-icon`}
-                          className="h-[5rem] w-[60%] "
+                          className="h-[5rem] w-[60%]"
                           data-tooltip-id="my-tooltip"
                           data-tooltip-content={technology.name}
                         />

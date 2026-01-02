@@ -491,9 +491,11 @@ export const contactData = {
       },
       type: "text",
       validation: {
-        fr: "Veuillez entrer votre nom",
-        en: "Please fill in your name",
-      },
+  fr: "Veuillez entrer votre nom",
+  en: "Please fill in your name",
+  es: "Por favor introduce tu nombre",
+},
+
       pattern: "{2}",
     },
     {
@@ -536,9 +538,11 @@ export const contactData = {
     name: "message",
     rows: 10,
     validation: {
-      fr: "Veuillez entrer votre message",
-      en: "Please fill in your message",
-    },
+  fr: "Veuillez entrer votre message",
+  en: "Please fill in your message",
+  es: "Por favor introduce tu mensaje",
+},
+
     pattern: "{10}",
   },
   button: {
@@ -570,11 +574,12 @@ privacyOptIn: {
 } as const;
 
 export const toastMessages = {
-  loadingProject: {
-    fr: "🦄 La démo en ligne va bientôt s'ouvrir. Démarrage des serveurs...",
-    en: "🦄 The live demo will open shortly. Starting servers...",
-    es: "🦄 La demo online se abrirá pronto. Iniciando servidores...",
-  },
+ loadingProject: {
+  fr: "🦄 Ouverture de la démo dans un nouvel onglet...",
+  en: "🦄 Opening the live demo in a new tab...",
+  es: "🦄 Abriendo la demo en una nueva pestaña...",
+},
+
   successEmailSent: {
     fr: "🦄 Merci pour votre email. Je vous répondrai dès que possible.",
     en: "🦄 Thank you for your email. I will get back to you as soon as possible.",
