@@ -98,48 +98,59 @@ const NavBar: React.FC = () => {
         <nav
           className={`max-lg:hidden flex-row flex justify-center items-center gap-24 font-semibold p-5 top-0 ${
             isSticky && !isMobileMenuActive
-              ? `sticky top-10 z-50 ml-auto mr-auto  w-max  px-16 py-5 transition-all ease-in-out duration-100 rounded-full border border-white border-opacity-40  bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${
+              ? `sticky top-10 z-50 ml-auto mr-auto w-max px-16 py-5 transition-all ease-in-out duration-100 rounded-full border border-white border-opacity-40 bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${
                   theme === "dark" ? "bg-darkblue" : "bg-white"
                 }`
               : ""
-          }
-   `}
+          }`}
         >
-          {navLinks.map((link, index) => (
-            <CustomNavLink key={index} link={link.hash} linkEn={link.en}>
-              {link.en === activeSection ? (
-                <div>
-                  <span className="text-[--orange] absolute -left-5 top-0">
-                    &lt;
-                  </span>
-                  {language === "FR" ? link.fr : link.en}
-                  {/* {link.de.toLocaleUpperCase()} */}
-                </div>
-              ) : (
-                <div
-                  onClick={() => {
-                    setActiveSection(link.en);
-                    setTimeOfLastClick(Date.now());
-                  }}
-                >
-                  {language === "FR" ? link.fr : link.en}
+          {navLinks.map((link, index) => {
+            // Texte selon la langue (FR / ES / EN)
+            const label =
+              language === "FR"
+                ? link.fr
+                : language === "ES"
+                ? link.es
+                : link.en;
 
-                  {/* {link.de.toLocaleUpperCase()} */}
-                </div>
-              )}
-            </CustomNavLink>
-          ))}
+            return (
+              <CustomNavLink key={index} link={link.hash} linkEn={link.en}>
+                {link.en === activeSection ? (
+                  <div className="nav-item-fixed">
+                    <span className="text-[--orange] absolute -left-5 top-0">
+                      &lt;
+                    </span>
+                    {label}
+                  </div>
+                ) : (
+                  <div
+                    className="nav-item-fixed"
+                    onClick={() => {
+                      setActiveSection(link.en);
+                      setTimeOfLastClick(Date.now());
+                    }}
+                  >
+                    {label}
+                  </div>
+                )}
+              </CustomNavLink>
+            );
+          })}
           <LanguageSwitch />
         </nav>
       )}
       {isMobileMenuActive && (
         <nav
-          className={` max-lg:flex w-[100vw] flex-row justify-between fixed bottom-0 left-0 z-50 bg-darkblue p-10  text-center items-center transition-all ease-in-out duration-100 rounded-t-3xl bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${
+          className={`max-lg:flex w-[100vw] flex-row justify-between fixed bottom-0 left-0 z-50 bg-darkblue p-10 text-center items-center transition-all ease-in-out duration-100 rounded-t-3xl bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${
             theme === "dark" ? "bg-darkblue" : "bg-white"
           }`}
         >
           {navLinks.map((link, mobileIndex) => (
-            <CustomNavLink key={mobileIndex} link={link.hash} linkEn={link.en}>
+            <CustomNavLink
+              key={mobileIndex}
+              link={link.hash}
+              linkEn={link.en}
+            >
               {link.en === activeSection ? (
                 <div className="text-[3.2rem] flex flex-col items-center">
                   <link.icon />

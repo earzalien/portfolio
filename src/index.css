@@ -503,3 +503,47 @@ a {
   animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
 }
+
+.btn-lang {
+  position: relative;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(71, 85, 105);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 150ms ease-out;
+}
+
+.btn-lang:hover {
+  color: #000000;
+}
+
+.btn-lang--active {
+  background-color: rgb(117, 161, 255);
+  color: #ffffff;
+}
+.language-switch-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+.language-switch-buttons img {
+  width: 40px;
+}
+
+.nav-item-fixed {
+  display: inline-block;
+  min-width: 8rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.code-preview {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

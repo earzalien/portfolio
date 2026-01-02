@@ -1,28 +1,38 @@
 import React from "react";
 import { useLanguage } from "../context/language-context";
-import { buttonLabels } from "../assets/lib/data";
+import flagFR from "../../public/assets/france.png";
+import flagEN from "../../public/assets/uk.png";
+import flagES from "../../public/assets/spain.png";
 
 const LanguageSwitch: React.FC = () => {
-  const { language, toggleLanguage } = useLanguage();
+  const { language, setLanguage } = useLanguage();
 
   return (
-    <React.Fragment>
-      <div className="language-switch-container">
-        <input
-          className="tgl tgl-style"
-          id="toggle-language"
-          type="checkbox"
-          onChange={toggleLanguage}
-          checked={language === "EN"}
-        />
-        <label
-          className="tgl-btn"
-          htmlFor="toggle-language"
-          data-tg-off={buttonLabels.language.fr}
-          data-tg-on={buttonLabels.language.en}
-        ></label>
-      </div>
-    </React.Fragment>
+    <div className="language-switch-buttons">
+      <button
+        onClick={() => setLanguage("FR")}
+        className={`btn-lang ${language === "FR" ? "btn-lang--active" : ""}`}
+        aria-label="Français"
+      >
+        <img src={flagFR} alt="Français" />
+      </button>
+
+      <button
+        onClick={() => setLanguage("EN")}
+        className={`btn-lang ${language === "EN" ? "btn-lang--active" : ""}`}
+        aria-label="English"
+      >
+        <img src={flagEN} alt="English" />
+      </button>
+
+      <button
+        onClick={() => setLanguage("ES")}
+        className={`btn-lang ${language === "ES" ? "btn-lang--active" : ""}`}
+        aria-label="Español"
+      >
+        <img src={flagES} alt="Español" />
+      </button>
+    </div>
   );
 };
 

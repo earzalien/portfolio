@@ -22,6 +22,7 @@ const AboutMe: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   const onAutoplayTimeLeft = (_s: any, time: number, progress: number) => {
     if (progressCircle.current && progressContent.current) {
       progressCircle.current.style.setProperty(
@@ -31,12 +32,38 @@ const AboutMe: React.FC = () => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     }
   };
+
+  // Sélection des paragraphes selon la langue
   const paragraphs =
-    language === "FR" ? aboutMeData.paragraphs_FR : aboutMeData.paragraphs_EN;
+    language === "FR"
+      ? aboutMeData.paragraphs_FR
+      : language === "ES"
+      ? aboutMeData.paragraphs_ES
+      : aboutMeData.paragraphs_EN;
+
+  // Titre selon la langue
+  const aboutTitle =
+    language === "FR"
+      ? aboutMeData.title_FR ?? aboutMeData.title_FR
+      : language === "ES"
+      ? aboutMeData.title_ES
+      : aboutMeData.title_EN;
+
+  // Description selon la langue
+  const aboutDescription =
+    language === "FR"
+      ? aboutMeData.description_FR ?? aboutMeData.description_FR
+      : language === "ES"
+      ? aboutMeData.description_ES
+      : aboutMeData.description_EN;
 
   return (
     <React.Fragment>
-      <section className="about-me relative mt-16 " id="about-me" ref={ref}>
+      <section
+        className="about-me relative mt-16 "
+        id="about-me"
+        ref={ref}
+      >
         <div className="title-container flex flex-col gap-6 justify-center items-center p-32 w-1/2 max-lg:w-full max-lg:p-16 max-lg:items-start">
           <motion.div
             ref={animationReference}
@@ -48,20 +75,18 @@ const AboutMe: React.FC = () => {
           >
             <p className="text-[--black] mb-6">
               <span className="text-orange">&lt;</span>
-              {language === "FR" ? aboutMeData.title : aboutMeData.title_EN}
+              {aboutTitle}
               <span className="text-orange">/&gt;</span>
             </p>
 
             <h2 className="text-[--black] text-center max-lg:text-left break-words">
-              {language === "FR"
-                ? aboutMeData.description
-                : aboutMeData.description_EN}
+              {aboutDescription}
             </h2>
           </motion.div>
         </div>
         <div className="flex flex-row justify-center gap-6 items-center pl-32 pr-32 mb-16  max-lg:flex-col max-lg:p-16 min-[1921px]:px-[45rem] min-[1921px]:mb-48">
           <article className="pl-60 max-lg:p-0">
-            <img src={me} alt={me} className="rounded-full"/>
+            <img src={me} alt="Kevin Ressegaire" className="rounded-full" />
           </article>
           <Swiper
             spaceBetween={100}
@@ -86,7 +111,7 @@ const AboutMe: React.FC = () => {
                   <div>
                     <img
                       src={paragraph.icon}
-                      alt={paragraph.icon}
+                      alt={paragraph.title}
                       className="w-24"
                     />
                   </div>

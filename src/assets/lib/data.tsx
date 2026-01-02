@@ -35,14 +35,17 @@ export const headerIntroData = {
   title: {
     fr: "Salut, je suis Kevin",
     en: "Hi, I'm Kevin",
+    es: "Hola, soy Kevin",
   },
   subtitle: {
     fr: "Un Développeur Passionné",
     en: "A Passionate Developer",
+    es: "Un Desarrollador Apasionado",
   },
   description: {
     fr: "",
     en: "",
+    es: "",
   },
   buttons: [
     {
@@ -50,6 +53,7 @@ export const headerIntroData = {
       label: {
         fr: "Contactez-moi", 
         en: "Contact me",
+        es: "Contáctame",
       },
       icon: FiMail,
       color: "main-btn",
@@ -59,6 +63,7 @@ export const headerIntroData = {
       label: {
         fr: "Mes projets", 
         en: "My Projects",
+        es: "Mis Proyectos",
       },
       icon: FiGithub,
       color: "secondary-btn",
@@ -74,6 +79,7 @@ export const projectsData = [
       "Application de recommandations de films personnalisées.",
     description_EN:
       "Personalized movie recommendation web app.",
+    description_ES: "Aplicación web de recomendaciones de películas personalizadas.", 
     technologies: [
       { name: "JavaScript", icon: javascripticon },
       { name: "TypeScript", icon: typescripticon},
@@ -98,11 +104,11 @@ export const projectsData = [
       "Fansite Outlander multilingue (FR/ES/EN) réalisé en équipe.",
     description_EN:
       "Multilingual Outlander fan website (FR/ES/EN) built as a team project.",
+    description_ES: "Sitio web de fans de Outlander multilingüe (FR/ES/EN) creado en equipo.", 
       technologies: [
         { name: "JavaScript", icon: javascripticon },
-        { name: "Typescript", icon: typescripticon },
-        { name: "NodeJS", icon: nodejsicon },
-        { name: "ReactJS", icon: reacticon},
+        { name: "HTML", icon: htmlicon },
+        { name: "CSS", icon: cssicon },
       ],
       image: zemprofiles,
       deploymenturl: "https://earzalien.github.io/sassenach/",
@@ -172,6 +178,7 @@ export const liveTickerData = {
   content: {
     fr: "Plus de projets sur GitHub",
     en: "More Projects on GitHub",
+    es: "Más proyectos en GitHub",
   },
 } as const;
 
@@ -251,13 +258,6 @@ export const skillsDataWeb = [
         icon: boostrapicon,
         color: "#CC6699",
       },
-      // Ajouts
-      {
-        title: "PHP",
-        hash: "#PHP",
-        icon: phpicom, // pense à importer ton icône PHP
-        color: "#777BB3", // bleu PHP [web:97]
-      },
     ],
   },
 ] as const;
@@ -267,6 +267,11 @@ export const skillsDataDesign = [
     skillsTitle: "Backend",
     skills: [
       {
+        title: "PHP",
+        hash: "#PHP",
+        icon: phpicom, // pense à importer ton icône PHP
+        color: "#777BB3", // bleu PHP [web:97]
+      },{
         title: "PostgreSQL",
         hash: "#PostgreSQL",
         icon: postgresqlicon, // icône PostgreSQL à ajouter dans tes imports
@@ -316,16 +321,16 @@ export const skillsDataCMS = [
 
 
 export const navLinks = [
-  { fr: "Accueil", en: "Home", hash: "#home", icon: GoHome },
-  { fr: "Compétences", en: "Skills", hash: "#skills", icon: GoStack },
-  { fr: "Projets", en: "Projects", hash: "#projects", icon: GoProject },
-  { fr: "À propos de moi", en: "About me", hash: "#about-me", icon: GoPerson },
-  { fr: "Contact", en: "Contact", hash: "#contact", icon: GoMail },
+  { fr: "Accueil", en: "Home", es: "Inicio", hash: "#home", icon: GoHome },
+  { fr: "Compétences", en: "Skills", es: "Habilidades", hash: "#skills", icon: GoStack },
+  { fr: "Projets", en: "Projects", es: "Proyectos", hash: "#projects", icon: GoProject },
+  { fr: "À propos de moi", en: "About me", es: "Sobre mí", hash: "#about-me", icon: GoPerson },
+  { fr: "Contact", en: "Contact", es: "Contacto", hash: "#contact", icon: GoMail },
 ] as const;
 
 export const FooterLinks = [
-  { fr: "Mentions légales", en: "Imprint", hash: "#imprint", data: <Imprint /> }, 
-  { fr: "Politique de confidentialité", en: "Privacy", hash: "#privacy", data: <Privacy /> }, 
+  { fr: "Mentions légales", en: "Imprint", es: "Aviso legal", hash: "#imprint", data: <Imprint /> },
+  { fr: "Politique de confidentialité", en: "Privacy", es: "Política de privacidad", hash: "#privacy", data: <Privacy /> },
 ] as const;
 
 
@@ -355,25 +360,29 @@ export const sideBarLeftSocials = [
 export const quotesData = [
   {
     fr: `"Ce n'est pas important de réussir du premier coup. L'essentiel est de réussir au final."`,
-    en: `#Building-in-Public`,
+    en: `"It's not important to succeed on the first try. The important thing is to succeed in the end."`,
+    es: `"No es importante tener éxito al primer intento. Lo esencial es tener éxito al final."`,
     author: "Kevin Ressegaire",
   },
   {
     fr: `"Le web est comme une toile, et le code est la peinture. Crée ton chef-d'œuvre."`,
     en: `"The web is like a canvas, and code is the paint. Create your masterpiece."`,
+    es: `"La web es como un lienzo, y el código es la pintura. Crea tu obra maestra."`,
   },
 ] as const;
 
 export const aboutMeData = {
-  title: "À propos de moi",
+  title_FR: "À propos de moi",
   title_EN: "About me",
-  description: "Quelques lignes de code à propos de moi",
+  title_ES: "Sobre mí",
+  description_FR: "Quelques lignes de code à propos de moi",
   description_EN: "A few code snippets about me",
+  description_ES: "Algunas líneas de código sobre mí",
   paragraphs_FR: [
     {
       title: "À propos de moi",
       description:
-        "Développeur web full-stack en formation à la Wild Code School, passionné par la création d’interfaces modernes et d’APIs robustes, avec un fort intérêt pour l’écosystème JavaScript.",
+        "Développeur web full-stack formé à la Wild Code School, passionné par la création d’interfaces modernes et d’APIs robustes, avec un fort intérêt pour l’écosystème JavaScript.",
       icon: aboutmeicon,
     },
     {
@@ -405,7 +414,7 @@ export const aboutMeData = {
     {
       title: "About Me",
       description:
-        "Full-stack web developer in training at Wild Code School, passionate about building modern UIs and robust APIs, with a strong focus on the JavaScript ecosystem."
+        "Full-stack web developer trained at Wild Code School, passionate about building modern UIs and robust APIs, with a strong focus on the JavaScript ecosystem."
     },
     {
       title: "Skills",
@@ -431,6 +440,32 @@ export const aboutMeData = {
         "I keep an active eye on modern front-end and back-end practices, new tools around React, Node.js and TypeScript, and up-to-date deployment workflows.",
       icon: youtubeicon,
     },
+  ], paragraphs_ES: [ 
+    {
+      title: "Sobre mí",
+      description: "Desarrollador web full-stack, formación en Wild Code School, apasionado por crear interfaces modernas y APIs robustas, con gran interés en el ecosistema JavaScript.",
+      icon: aboutmeicon,
+    },
+    {
+      title: "Habilidades",
+      description: "Trabajo principalmente con JavaScript/TypeScript, React, Node.js, PostgreSQL, MongoDB y Git, aplicando las mejores prácticas del bootcamp (revisiones de código, tests, trabajo en equipo).",
+      icon: hobbiesicon,
+    },
+    {
+      title: "Trayectoria",
+      description: "En el bootcamp de Wild Code School, participo en proyectos full-stack colaborativos como aplicaciones de recomendación de películas, quizzes interactivos y servicios REST con integración de APIs externas.",
+      icon: medalicon,
+    },
+    {
+      title: "Proyectos & Aprendizaje",
+      description: "Construyo regularmente nuevos proyectos para experimentar con librerías, mejorar mi arquitectura front/back y documentar mi razonamiento técnico (elección de stack, gestión de errores, rendimiento).",
+      icon: blogsicon,
+    },
+    {
+      title: "Vigilancia & Curiosidad",
+      description: "Hago una vigilancia activa de las mejores prácticas front-end y back-end, novedades alrededor de React, Node.js y TypeScript, así como herramientas modernas de desarrollo y despliegue.",
+      icon: youtubeicon,
+    },
   ],
 };
 
@@ -439,10 +474,12 @@ export const contactData = {
   title: {
     fr: "Contact",
     en: "Contact",
+    es: "Contacto", 
   },
   description: {
     fr: "Écrivez-moi un message et je vous répondrai rapidement.",
     en: "Write me a message and I will get back to you shortly.",
+    es: "Escríbeme un mensaje y te responderé rápidamente.", 
   },
   inputfields: [
     {
@@ -450,6 +487,7 @@ export const contactData = {
       placeholder: {
         fr: "Votre nom",
         en: "Your Name",
+        es: "Tu Nombre",
       },
       type: "text",
       validation: {
@@ -463,11 +501,13 @@ export const contactData = {
       placeholder: {
         fr: "Votre adresse e-mail",
         en: "Your E-Mail",
+        es: "Tu Email", 
       },
       type: "email",
       validation: {
         fr: "Veuillez entrer votre adresse e-mail",
         en: "Please fill in your email",
+        es: "Por favor, rellene su correo electrónico", 
       },
       pattern: "[@]{4}",
     },
@@ -476,11 +516,13 @@ export const contactData = {
       placeholder: {
         fr: "Votre sujet",
         en: "Your Subject",
+        es: "Tu Asunto", 
       },
       type: "text",
       validation: {
         fr: "Veuillez entrer un sujet",
         en: "Please fill in your subject",
+      es: "Por favor, rellene el asunto", 
       },
       pattern: "{10}",
     },
@@ -489,6 +531,7 @@ export const contactData = {
     placeholder: {
       fr: "Votre message",
       en: "Your Message",
+      es: "Tu Mensaje", 
     },
     name: "message",
     rows: 10,
@@ -502,6 +545,7 @@ export const contactData = {
     value: {
       fr: "Envoyer",
       en: "Send",
+      es: "Enviar",
     },
   },
   icon: FiMail,
@@ -511,34 +555,40 @@ export const contactData = {
     second: "secondary-btn",
     icon: "white",
   },
-  privacyOptIn: {
+privacyOptIn: {
     checkbox: {
       fr: "J'accepte que Kevin Ressegaire utilise mes données personnelles (nom et adresse e-mail) pour me contacter.",
       en: "I agree that Kevin Ressegaire may use my personal data (name and e-mail address) to contact me.",
+      es: "Acepto que Kevin Ressegaire utilice mis datos personales (nombre y dirección de correo electrónico) para ponerse en contacto conmigo.",
     },
     description: {
       fr: "En envoyant cette demande, vous confirmez avoir lu la politique de confidentialité.",
       en: "By submitting this request, you acknowledge that you have read the Privacy Policy.",
+      es: "Al enviar esta solicitud, confirmas que has leído la política de privacidad.",
     },
   },
 } as const;
 
 export const toastMessages = {
   loadingProject: {
-    fr: "🦄 La démo en ligne va bientôt s’ouvrir. Démarrage des serveurs...",
+    fr: "🦄 La démo en ligne va bientôt s'ouvrir. Démarrage des serveurs...",
     en: "🦄 The live demo will open shortly. Starting servers...",
+    es: "🦄 La demo online se abrirá pronto. Iniciando servidores...",
   },
   successEmailSent: {
     fr: "🦄 Merci pour votre email. Je vous répondrai dès que possible.",
     en: "🦄 Thank you for your email. I will get back to you as soon as possible.",
+    es: "🦄 Gracias por tu email. Te responderé lo antes posible.",
   },
   failedEmailSent: {
-    fr: "🦄 L’envoi de votre email n’a pas fonctionné. Veuillez réessayer plus tard ou écrire à kevin.ressegaire@gmail.com.",
-    en: "🦄 Unfortunately the sending of your email did not work. Please try again later or email kevin.ressegaire@gmail.com.",
+    fr: "🦄 L'envoi de votre email n'a pas fonctionné. Veuillez réessayer plus tard ou écrire à [kevin.ressegaire@gmail.com](mailto:kevin.ressegaire@gmail.com).",
+    en: "🦄 Unfortunately the sending of your email did not work. Please try again later or email [kevin.ressegaire@gmail.com](mailto:kevin.ressegaire@gmail.com).",
+    es: "🦄 El envío de tu email no funcionó. Inténtalo de nuevo más tarde o escribe a [kevin.ressegaire@gmail.com](mailto:kevin.ressegaire@gmail.com).",
   },
   failedValidationName: {
     fr: "Veuillez entrer votre nom",
     en: "Please fill in your name",
+    es: "Por favor introduce tu nombre",  
   },
 } as const;
 
@@ -546,6 +596,7 @@ export const buttonLabels = {
   language: {
     fr: "FR",
     en: "EN",
+    es: "ES"  
   },
 } as const;
 

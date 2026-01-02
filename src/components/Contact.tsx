@@ -22,7 +22,6 @@ const Contact: React.FC = () => {
   const { ref } = useSectionInView("Contact");
   const { language } = useLanguage();
   const { theme } = useTheme();
-  const [error, setError] = useState<string | any>(null);
 
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -33,28 +32,77 @@ const Contact: React.FC = () => {
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   const notifySentForm: React.FormEventHandler<HTMLFormElement> = async (e) => {
-    setError(null);
-    console.log(error);
-
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+
+    const form = e.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const data = {
+      name: String(formData.get("name") || ""),
+      email: String(formData.get("email") || ""),
+      subject: String(formData.get("subject") || ""),
+      message: String(formData.get("message") || ""),
+    };
+
+    // Validation côté front
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!data.name || data.name.trim().length < 2) {
+      toast.error(
+        language === "FR"
+          ? "Merci d’indiquer un nom valide."
+          : language === "ES"
+          ? "Por favor introduce un nombre válido."
+          : "Please enter a valid name."
+      );
+      return;
+    }
+
+    if (!emailRegex.test(data.email)) {
+      toast.error(
+        language === "FR"
+          ? "Merci d’indiquer une adresse email valide."
+          : language === "ES"
+          ? "Por favor introduce un correo electrónico válido."
+          : "Please enter a valid email address."
+      );
+      return;
+    }
+
+    if (!data.message || data.message.trim().length < 10) {
+      toast.error(
+        language === "FR"
+          ? "Ton message est trop court."
+          : language === "ES"
+          ? "Tu mensaje es demasiado corto."
+          : "Your message is too short."
+      );
+      return;
+    }
 
     try {
-      const response = await axios.post(apiBaseUrl, data);
+      const response = await axios.post(apiBaseUrl, data, {
+        headers: { "Content-Type": "application/json" },
+      });
       console.log(response);
+
       if (language === "FR") {
         toast.success(toastMessages.successEmailSent.fr);
+      } else if (language === "ES") {
+        toast.success(toastMessages.successEmailSent.es);
       } else {
         toast.success(toastMessages.successEmailSent.en);
       }
     } catch (error) {
       console.log(error);
+
       if (language === "FR") {
         toast.error(toastMessages.failedEmailSent.fr);
+      } else if (language === "ES") {
+        toast.error(toastMessages.failedEmailSent.es);
       } else {
         toast.error(toastMessages.failedEmailSent.en);
       }
-      setError("An Error occured, try again later");
     }
   };
 
@@ -119,31 +167,39 @@ const Contact: React.FC = () => {
     };
   }, []);
 
+  const shortEmail = email.length > 40 ? email.slice(0, 37) + "..." : email;
+
   const codeSnippet = `
 import  { useState } from "react";
+
 
 // 🌈 Spreading Stardust: 
 // Crafting Cosmic Email 🌌
 
+
 const [sender, setSender] = "${name}${
     lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
   }🚀";
-const [recipient, setRecipient] = "${email}${
+const [recipient, setRecipient] = "${shortEmail}${
     lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
   }📧";
-const [subject, setSubject] = \n"${subject}${
+const [subject, setSubject] = 
+"${subject}${
     lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
   }✨";
 const [message, setMessage] = 
-\`Hello, intrepid traveler! 👋\n
-Across the cosmos, a message for you:\n
+\`Hello, intrepid traveler! 👋
+
+Across the cosmos, a message for you:
+
 "${wordWrap(message, 40, " ")}${
     lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
-  }"\n
-Wishing you stardust dreams,\n
+  }"
+
+Wishing you stardust dreams,
+
 ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
 \``;
-
 
   return (
     <React.Fragment>
@@ -165,13 +221,19 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
           >
             <p className="text-[--black] mb-6">
               <span className="text-[--orange]">&lt;</span>
-              {language === "FR" ? contactData.title.fr : contactData.title.en}
+              {language === "FR"
+                ? contactData.title.fr
+                : language === "ES"
+                ? contactData.title.es
+                : contactData.title.en}
               <span className="text-[--orange]">/&gt;</span>
             </p>
 
             <h2 className="text-[--black] text-center">
               {language === "FR"
                 ? contactData.description.fr
+                : language === "ES"
+                ? contactData.description.es
                 : contactData.description.en}
             </h2>
           </motion.div>
@@ -184,7 +246,10 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
               theme={themes.nightOwl}
             >
               {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre className={`${className} text-4xl `} style={style}>
+                <pre
+                  className={`${className} text-4xl code-preview`}
+                  style={style}
+                >
                   {tokens.map((line, i) => (
                     <div {...getLineProps({ line, key: i })}>
                       {line.map((token, key) => (
@@ -207,8 +272,10 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 type={input.type}
                 placeholder={
                   language === "FR"
-                    ? `${input.placeholder.fr}`
-                    : `${input.placeholder.en}`
+                    ? input.placeholder.fr
+                    : language === "ES"
+                    ? input.placeholder.es
+                    : input.placeholder.en
                 }
                 name={input.name}
                 value={
@@ -241,8 +308,10 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
               rows={contactData.textarea.rows}
               placeholder={
                 language === "FR"
-                  ? `${contactData.textarea.placeholder.fr}`
-                  : `${contactData.textarea.placeholder.en}`
+                  ? contactData.textarea.placeholder.fr
+                  : language === "ES"
+                  ? contactData.textarea.placeholder.es
+                  : contactData.textarea.placeholder.en
               }
               name={contactData.textarea.name}
               onFocus={() => {
@@ -275,20 +344,26 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
               </label>
               <p>
                 {language === "FR"
-                  ? `${contactData.privacyOptIn.checkbox.fr}`
-                  : `${contactData.privacyOptIn.checkbox.en}`}
+                  ? contactData.privacyOptIn.checkbox.fr
+                  : language === "ES"
+                  ? contactData.privacyOptIn.checkbox.es
+                  : contactData.privacyOptIn.checkbox.en}
               </p>
             </div>
             <p>
               {language === "FR"
-                ? `${contactData.privacyOptIn.description.fr}`
-                : `${contactData.privacyOptIn.description.en}`}
+                ? contactData.privacyOptIn.description.fr
+                : language === "ES"
+                ? contactData.privacyOptIn.description.es
+                : contactData.privacyOptIn.description.en}
             </p>
             <Button
               value={
                 language === "FR"
-                  ? `${contactData.button.value.fr}`
-                  : `${contactData.button.value.en}`
+                  ? contactData.button.value.fr
+                  : language === "ES"
+                  ? contactData.button.value.es
+                  : contactData.button.value.en
               }
               iconSVG={contactData.icon}
               buttoncolor={contactData.colors.main}
