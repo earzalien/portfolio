@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../context/language-context";
 
 const Privacy: React.FC = () => {
@@ -109,10 +110,20 @@ const Privacy: React.FC = () => {
       </h2>
       <p>
         {isFR
-          ? "Pour toute question relative à cette politique de confidentialité, vous pouvez m’écrire à : kevin.ressegaire@gmail.com."
+          ? "Pour toute question relative à cette politique de confidentialité, merci d’utiliser le "
           : isES
-          ? "Para cualquier pregunta sobre esta política de privacidad, puedes escribirme a: kevin.ressegaire@gmail.com."
-          : "For any questions about this privacy policy, you can reach me at: kevin.ressegaire@gmail.com."}
+          ? "Para cualquier pregunta sobre esta política de privacidad, utiliza el "
+          : "For any questions about this privacy policy, please use the "}
+        <Link
+          to="/#contact"
+          className="underline text-[--orange]"
+        >
+          {isFR
+            ? "formulaire de contact"
+            : isES
+            ? "formulario de contacto"
+            : "contact form"}
+        </Link>.
       </p>
     </section>
   );

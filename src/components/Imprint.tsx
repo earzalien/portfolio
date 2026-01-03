@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../context/language-context";
 
 const Imprint: React.FC = () => {
@@ -9,32 +10,26 @@ const Imprint: React.FC = () => {
   return (
     <section className="max-w-3xl mx-auto px-6 py-16 space-y-6">
       <h1 className="text-3xl font-bold">
-        {isFR
-          ? "Mentions légales"
-          : isES
-          ? "Aviso legal"
-          : "Imprint"}
+        {isFR ? "Mentions légales" : isES ? "Aviso legal" : "Imprint"}
       </h1>
 
       <h2 className="text-2xl font-semibold">
-        {isFR
-          ? "Éditeur du site"
-          : isES
-          ? "Editor del sitio"
-          : "Site owner"}
+        {isFR ? "Éditeur du site" : isES ? "Editor del sitio" : "Site owner"}
       </h2>
       <p>
-        Kévin Ressegaire<br />
-        Développeur full‑stack (portfolio personnel)<br />
-        E‑mail&nbsp;: kevin.ressegaire@gmail.com
+        Kévin Ressegaire
+        <br />
+        Développeur full‑stack (portfolio personnel)
+        <br />
+        {isFR
+          ? "Pour me contacter, merci d’utiliser le formulaire de contact du site."
+          : isES
+          ? "Para contactarme, utiliza el formulario de contacto del sitio."
+          : "To contact me, please use the contact form on this site."}
       </p>
 
       <h2 className="text-2xl font-semibold">
-        {isFR
-          ? "Hébergement"
-          : isES
-          ? "Alojamiento"
-          : "Hosting"}
+        {isFR ? "Hébergement" : isES ? "Alojamiento" : "Hosting"}
       </h2>
       <p>
         {isFR
@@ -60,11 +55,7 @@ const Imprint: React.FC = () => {
       </p>
 
       <h2 className="text-2xl font-semibold">
-        {isFR
-          ? "Responsabilité"
-          : isES
-          ? "Responsabilidad"
-          : "Liability"}
+        {isFR ? "Responsabilité" : isES ? "Responsabilidad" : "Liability"}
       </h2>
       <p>
         {isFR
@@ -75,18 +66,29 @@ const Imprint: React.FC = () => {
       </p>
 
       <h2 className="text-2xl font-semibold">
-        {isFR
-          ? "Contact"
-          : isES
-          ? "Contacto"
-          : "Contact"}
+        {isFR ? "Contact" : isES ? "Contacto" : "Contact"}
       </h2>
       <p>
         {isFR
-          ? "Pour toute question concernant le site, vous pouvez m’écrire directement à l’adresse suivante : kevin.ressegaire@gmail.com."
+          ? "Pour toute question concernant le site, vous pouvez passer par le "
           : isES
-          ? "Para cualquier consulta relacionada con el sitio, puedes escribirme directamente a: kevin.ressegaire@gmail.com."
-          : "For any question related to this site, you can contact me at: kevin.ressegaire@gmail.com."}
+          ? "Para cualquier consulta relacionada con el sitio, puedes utilizar el "
+          : "For any question related to this site, please use the "}
+        <Link
+          to="/#contact"
+          className="underline text-[--orange]"
+        >
+          {isFR
+            ? "formulaire de contact"
+            : isES
+            ? "formulario de contacto"
+            : "contact form"}
+        </Link>
+        {isFR
+          ? "."
+          : isES
+          ? "."
+          : "."}
       </p>
     </section>
   );
