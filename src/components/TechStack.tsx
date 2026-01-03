@@ -44,11 +44,15 @@ const TechStack: React.FC = () => {
             }}
           >
             <p className="font-black mb-6">
-              <span className="text-[--orange]">&lt;</span>{language === "FR"
-                ? "Mes Compétences"
-                : "My Skills"}
-              <span className="text-[--orange]">/&gt;</span>
-            </p>
+  <span className="text-[--orange]">&lt;</span>
+  {language === "FR"
+    ? "Mes Compétences"
+    : language === "ES"
+    ? "Mis competencias"
+    : "My Skills"}
+  <span className="text-[--orange]">/&gt;</span>
+</p>
+
           </motion.div>
         </div>
         <div className="flex gap-40 justify-center max-lg:flex-col">

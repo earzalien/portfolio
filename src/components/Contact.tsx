@@ -581,7 +581,9 @@ const [message, setMessage] =
               type="submit"
               elementType="input"
             />
-
+<div className="w-full flex justify-center mb-4 lg:hidden">
+    <ServiceStatus />
+  </div>
             <ToastContainer
               className="w-max text-3xl block p-3 max-lg:w-full "
               position="bottom-center"
