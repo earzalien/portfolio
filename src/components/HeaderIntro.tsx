@@ -13,7 +13,7 @@ const HeaderIntro: React.FC = () => {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
- const handleCvClick = async () => {
+  const handleCvClick = async () => {
     const url =
       language === "FR"
         ? "/cv_fr.pdf"
@@ -45,8 +45,7 @@ const HeaderIntro: React.FC = () => {
       toast.info(msg);
     }
   };
-  
-  // Helpers de texte selon la langue
+
   const title =
     language === "FR"
       ? headerIntroData.title.fr
@@ -70,7 +69,7 @@ const HeaderIntro: React.FC = () => {
 
   return (
     <section
-      className="hero flex flex-col justify-center gap-10 items-center h-full max-lg:h-full max-lg:gap-6"
+      className="hero flex flex-col justify-center items-center text-center gap-10 h-full max-lg:h-full max-lg:gap-6 px-4"
       ref={ref}
       id="home"
     >
@@ -82,18 +81,18 @@ const HeaderIntro: React.FC = () => {
         className="w-1/6 drop-shadow-2xl rounded-full shadow-2xl avatar-img max-lg:w-3/4"
       />
 
-      <h1>
+      <h1 className="text-center">
         {title}
-        <span className="wave text-7xl">&#128075;&#127997;</span>
+        <span className="wave text-7xl ml-2">&#128075;&#127997;</span>
       </h1>
 
-      <h2>{subtitle}</h2>
+      <h2 className="text-center">{subtitle}</h2>
 
-      <p className="w-1/2 text-center max-lg:hidden">
+      <p className="w-1/2 text-center max-lg:w-full">
         {description}
       </p>
 
-      <div className="button-container flex items-center justify-center mr-8 gap-10 mb-12 max-lg:flex-col max-lg:items-center">
+      <div className="button-container flex items-center justify-center gap-10 mb-12 max-lg:flex-col max-lg:items-center">
         {headerIntroData.buttons.map((button, index) => {
           const buttonLabel =
             language === "FR"
@@ -118,8 +117,7 @@ const HeaderIntro: React.FC = () => {
         })}
       </div>
 
-            {/* Bouton CV selon la langue */}
-                  <div className="flex items-center justify-center mb-12">
+      <div className="flex items-center justify-center mb-12">
         <button
           type="button"
           onClick={handleCvClick}
@@ -132,9 +130,6 @@ const HeaderIntro: React.FC = () => {
             : "Download my CV"}
         </button>
       </div>
-
-
-
 
       <div className="scroll-down-container animate-bounce flex gap-6">
         <BsMouse className="text-[2.6rem]" />
