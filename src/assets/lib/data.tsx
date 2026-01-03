@@ -76,53 +76,56 @@ export const projectsData = [
   {
     title: "CineMood",
     description:
-      "Application de recommandations de films personnalisées.",
+      "Application web de recommandations de films centrée sur l’expérience utilisateur et la structuration des données. Le projet met l’accent sur la gestion des états, la séparation front/back et l’intégration d’APIs externes dans une architecture maintenable.",
     description_EN:
-      "Personalized movie recommendation web app.",
-    description_ES: "Aplicación web de recomendaciones de películas personalizadas.", 
+      "Movie recommendation web application focused on user experience and data structuring. The project emphasizes state management, front/back separation and external API integration within a maintainable architecture.",
+    description_ES:
+      "Aplicación web de recomendación de películas centrada en la experiencia de usuario y la estructuración de datos. El proyecto pone el foco en la gestión de estados, la separación front/back y la integración de APIs externas.", 
     technologies: [
       { name: "JavaScript", icon: javascripticon },
-      { name: "TypeScript", icon: typescripticon},
-      { name: "NodeJS", icon: nodejsicon},
-      { name: "ReactJS", icon: reacticon}
-      ],
-      image: zempostsicon,
-      deploymenturl: "https://cinemood-ebon.vercel.app/",
-      githuburl: "https://github.com/earzalien/cinemood",
-      githubicon: FiGithub,
-      deploymenticon: FiLink,
-      colors: {
-        main: "main-btn",
-        second: "secondary-btn",
-        icon: "white",
-        projectcolor: "#70B9BE",
-      },
-    },  
+      { name: "TypeScript", icon: typescripticon },
+      { name: "NodeJS", icon: nodejsicon },
+      { name: "ReactJS", icon: reacticon },
+    ],
+    image: zempostsicon,
+    deploymenturl: "https://cinemood-ebon.vercel.app/",
+    githuburl: "https://github.com/earzalien/cinemood",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
+
   {
     title: "Outlander",
     description:
-      "Fansite Outlander multilingue (FR/ES/EN) réalisé en équipe.",
+      "Site web multilingue développé en équipe, avec un accent sur la structuration du contenu, la cohérence entre les langues et l’organisation du code front-end. Le projet a permis de travailler la collaboration, la lisibilité du code et la gestion des versions.",
     description_EN:
-      "Multilingual Outlander fan website (FR/ES/EN) built as a team project.",
-    description_ES: "Sitio web de fans de Outlander multilingüe (FR/ES/EN) creado en equipo.", 
-      technologies: [
-        { name: "JavaScript", icon: javascripticon },
-        { name: "HTML", icon: htmlicon },
-        { name: "CSS", icon: cssicon },
-      ],
-      image: zemprofiles,
-      deploymenturl: "https://earzalien.github.io/sassenach/",
-      githuburl:
-        "https://github.com/earzalien/sassenach",
-      githubicon: FiGithub,
-      deploymenticon: FiLink,
-      colors: {
-        main: "main-btn",
-        second: "secondary-btn",
-        icon: "white",
-        projectcolor: "#FFD5BD",
-      },
-    },/*
+      "Team-built multilingual website focusing on content structure, language consistency and front-end code organization. The project emphasized collaboration, code readability and version control practices.",
+    description_ES:
+      "Sitio web multilingüe desarrollado en equipo, centrado en la estructuración del contenido, la coherencia entre idiomas y la organización del código front-end. El proyecto reforzó la colaboración y las buenas prácticas de versionado.", 
+    technologies: [
+      { name: "JavaScript", icon: javascripticon },
+      { name: "HTML", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+    ],
+    image: zemprofiles,
+    deploymenturl: "https://earzalien.github.io/sassenach/",
+    githuburl: "https://github.com/earzalien/sassenach",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#FFD5BD",
+    },
+  },
+/*
     {
       title: "ZemDocs",
       description: 
