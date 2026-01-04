@@ -38,14 +38,14 @@ const ServiceStatus: React.FC = () => {
   const label =
     language === "FR"
       ? status === "operational"
-        ? "Envoi des messages : en ligne"
+        ? "Envoi des messages : disponible"
         : "Envoi des messages : indisponible"
       : language === "ES"
       ? status === "operational"
-        ? "Envío de mensajes: en línea"
+        ? "Envío de mensajes: disponible"
         : "Envío de mensajes: no disponible"
       : status === "operational"
-      ? "Message sending: online"
+      ? "Message sending: available"
       : "Message sending: unavailable";
 
   return (
