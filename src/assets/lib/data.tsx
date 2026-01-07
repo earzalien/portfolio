@@ -77,7 +77,7 @@ export const projectsData = [
   {
     title: "CineMood",
     description:
-      "Application web de recommandations de films réalisée dans le cadre de ma formation. Le projet met l’accent sur l’expérience utilisateur, la gestion des états, la séparation front/back et l’intégration d’APIs externes dans une architecture maintenable.",
+      "Application web de recommandations de films réalisée dans le cadre de ma formation. Le projet met l'accent sur l'expérience utilisateur, la gestion des états, la séparation front/back et l'intégration d'APIs externes dans une architecture maintenable.",
     description_EN:
       "Movie recommendation web application built as a training project. The project emphasizes user experience, state management, front/back separation and external API integration within a maintainable architecture.",
     description_ES:
@@ -104,7 +104,7 @@ export const projectsData = [
   {
     title: "Portfolio",
     description:
-      "Site portfolio personnel présentant mon parcours, mes compétences et mes projets. Développé avec une approche responsive et multilingue, il met en avant la qualité du code, l’accessibilité et l’optimisation des performances.",
+      "Site portfolio personnel présentant mon parcours, mes compétences et mes projets. Développé avec une approche responsive et multilingue, il met en avant la qualité du code, l'accessibilité et l'optimisation des performances.",
     description_EN:
       "Personal portfolio website showcasing my background, skills and projects. Built with a responsive and multilingual approach, it highlights code quality, accessibility and performance optimization.",
     description_ES:
@@ -358,113 +358,112 @@ export const aboutMeData = {
   title_EN: "About me",
   title_ES: "Sobre mí",
 
-  description_FR: "Une approche du développement guidée par les contraintes, les choix et leurs conséquences",
-  description_EN: "A development approach driven by constraints, trade-offs and consequences",
-  description_ES: "Un enfoque del desarrollo guiado por las limitaciones, las decisiones y sus consecuencias",
+  description_FR:
+    "Une approche du développement guidée par les contraintes, les choix et leurs conséquences",
+  description_EN:
+    "A development approach driven by constraints, trade-offs and consequences",
+  description_ES:
+    "Un enfoque del desarrollo guiado por las limitaciones, las decisiones y sus consecuencias",
 
   paragraphs_FR: [
-  {
-    title: "Responsabilité terrain & gestion de situations critiques",
-    description:
-      "Pendant près de vingt ans comme chef de réception dans l’hôtellerie haut de gamme, j’ai occupé une position centrale dans des environnements à forte pression. J’étais responsable de la résolution des incidents critiques, qu’ils soient techniques, humains ou organisationnels. Cette expérience m’a forgé des réflexes solides : analyse rapide, priorisation claire et décisions efficaces sous contrainte.",
-    icon: careerIcon,
-  },
-  {
-    title: "Transfert de compétences vers le développement",
-    description:
-      "Le développement web s’est imposé comme une continuité naturelle de ce rôle. Concevoir une application revient à structurer un système, anticiper les points de rupture et garantir sa fiabilité dans le temps. C’est ce que j’ai toujours fait, désormais avec du code plutôt qu’avec des procédures.",
-    icon: aboutmeicon,
-  },
-  {
-    title: "Posture d’équipe et influence technique",
-    description:
-      "En formation à la Wild Code School, j’ai naturellement pris un rôle de soutien technique au sein du groupe. Je suis régulièrement sollicité pour clarifier un raisonnement, diagnostiquer un bug ou proposer une approche plus lisible. Cette posture reflète une capacité à prendre du recul et à fluidifier le travail collectif.",
-    icon: gantticon,
-  },
-  {
-    title: "Approche d’architecture et arbitrages",
-    description:
-      "Je conçois des solutions simples avant de chercher à les rendre extensibles. J’évite le sur‑engineering, limite les abstractions prématurées et privilégie des choix techniques alignés avec les contraintes réelles du projet et le niveau de l’équipe.",
-    icon: archiicon,
-  },
-  {
-    title: "Projection professionnelle",
-    description:
-      "Je recherche aujourd’hui une opportunité — poste junior, alternance ou stage — au sein d’une équipe où je pourrai continuer à progresser techniquement tout en assumant rapidement des responsabilités transverses. Mon objectif est de m’inscrire dans des projets durables et de gagner en impact au fil du temps.",
-    icon: objectificon,
-  },
-],
+    {
+      title: "Mon parcours",
+      description:
+        "Pendant près de vingt ans comme chef de réception dans l'hôtellerie haut de gamme, j'ai occupé une position centrale dans des environnements à forte pression. J'étais en première ligne pour résoudre des situations complexes, qu'elles soient techniques, humaines ou organisationnelles. Cette expérience m'a apporté des réflexes solides : analyse rapide, priorisation claire et prise de décision pragmatique sous contrainte.",
+      icon: careerIcon,
+    },
+    {
+      title: "Transfert de compétences vers le développement",
+      description:
+        "Le développement web s'est imposé comme une continuité naturelle de ce parcours. Concevoir une application, c'est structurer un système, anticiper les points de fragilité et garantir sa stabilité dans le temps. C'est une démarche que j'ai toujours suivie, aujourd'hui à travers le code plutôt que des procédures.",
+      icon: aboutmeicon,
+    },
+    {
+      title: "Esprit d'entraide",
+      description:
+        "Lors de ma formation à la Wild Code School, j'ai naturellement adopté une posture de soutien technique au sein du groupe. Il m'arrive régulièrement d'être sollicité pour clarifier un raisonnement, comprendre l'origine d'un bug ou proposer une approche plus lisible. Cette position reflète ma capacité à prendre du recul et à contribuer à un travail collectif plus fluide.",
+      icon: gantticon,
+    },
+    {
+      title: "Architecture sobre et claire",
+      description:
+        "Je privilégie des solutions simples et compréhensibles avant toute recherche d'extension ou d'optimisation. J'évite le sur-engineering, limite les abstractions prématurées et m'efforce de faire des choix techniques alignés avec les contraintes réelles du projet et le contexte de l'équipe.",
+      icon: archiicon,
+    },
+    {
+      title: "Objectif actuel",
+      description:
+        "Je recherche aujourd'hui une opportunité - poste junior, alternance ou stage - dans un cadre qui me permette d'apprendre, de pratiquer régulièrement et de renforcer mes compétences techniques. Je souhaite évoluer dans une équipe où la qualité, la clarté et la transmission priment, afin de progresser sereinement et de m'inscrire dans des projets sur le long terme.",
+      icon: objectificon,
+    },
+  ],
 
- paragraphs_EN: [
-  {
-    title: "On-the-ground responsibility & critical incident management",
-    description:
-      "For nearly twenty years as a front office manager in high-end hospitality, I held a central position in high-pressure environments. I was responsible for resolving critical incidents, whether technical, human or organizational. This experience gave me strong reflexes: fast analysis, clear prioritization and effective decision-making under constraints.",
-    icon: careerIcon,
-  },
-  {
-    title: "Transferring skills into development",
-    description:
-      "Web development came as a natural extension of that role. Designing an application means structuring a system, anticipating breaking points and ensuring long-term reliability. It is essentially what I have always done, now with code instead of procedures.",
-    icon: aboutmeicon,
-  },
-  {
-    title: "Team mindset and technical influence",
-    description:
-      "During my training at Wild Code School, I naturally took on a technical support role within the group. I am often asked to clarify reasoning, diagnose bugs or suggest more readable approaches. This reflects my ability to take a step back and keep the team’s work flowing smoothly.",
-    icon: gantticon,
-  },
-  {
-    title: "Architecture mindset and trade-offs",
-    description:
-      "I design solutions to be simple first, then extensible when needed. I avoid over-engineering, limit premature abstractions and favor technical choices that match real project constraints and the team’s actual level.",
-    icon: archiicon,
-  },
-  {
-    title: "Professional outlook",
-    description:
-      "I am currently looking for an opportunity — junior position, apprenticeship or internship — in a team where I can keep growing technically while quickly taking on cross-functional responsibilities. My goal is to contribute to long-term projects and increase my impact over time.",
-    icon: objectificon,
-  },
-],
-
+  paragraphs_EN: [
+    {
+      title: "My background",
+      description:
+        "For nearly twenty years as a front office manager in high-end hospitality, I held a central role in high-pressure environments. I was on the front line when handling complex situations, whether technical, human or organizational. This experience built strong reflexes: fast analysis, clear prioritization and pragmatic decision-making under constraints.",
+      icon: careerIcon,
+    },
+    {
+      title: "Transferring skills into development",
+      description:
+        "Web development emerged as a natural continuation of this background. Designing an application means structuring a system, anticipating weak points and aiming for long-term stability. This is essentially the same mindset I have always applied, now expressed through code rather than procedures.",
+      icon: aboutmeicon,
+    },
+    {
+      title: "Collaborative mindset",
+      description:
+        "During my training at Wild Code School, I naturally took on a technical support role within the group. I am often asked to clarify reasoning, identify the source of a bug or suggest a more readable approach. This reflects my ability to step back and contribute to smoother collective work.",
+      icon: gantticon,
+    },
+    {
+      title: "Clear and simple architecture",
+      description:
+        "I favor simple, understandable solutions before focusing on scalability or optimization. I avoid over-engineering, limit premature abstractions and make technical decisions that align with real project constraints and the team's context.",
+      icon: archiicon,
+    },
+    {
+      title: "Current objective",
+      description:
+        "I am currently looking for an opportunity - junior position, apprenticeship or internship - in an environment that allows me to learn, practice consistently and strengthen my technical skills. I want to grow within a team where quality, clarity and knowledge sharing matter, and to contribute to projects with a long-term perspective.",
+      icon: objectificon,
+    },
+  ],
 
   paragraphs_ES: [
-  {
-    title: "Responsabilidad en el terreno y gestión de incidencias críticas",
-    description:
-      "Durante casi veinte años como jefe de recepción en la hostelería de alto nivel, ocupé una posición central en entornos de alta presión. Era responsable de resolver incidencias críticas, tanto técnicas como humanas u organizativas. Esta experiencia me ha dado reflejos sólidos: análisis rápido, priorización clara y decisiones eficaces bajo restricciones.",
-    icon: careerIcon,
-  },
-  {
-    title: "Transferencia de competencias al desarrollo",
-    description:
-      "El desarrollo web se impuso como una continuación natural de ese rol. Diseñar una aplicación significa estructurar un sistema, anticipar los puntos de ruptura y garantizar su fiabilidad a lo largo del tiempo. Es esencialmente lo que siempre he hecho, ahora con código en lugar de procedimientos.",
-    icon: aboutmeicon,
-  },
-  {
-    title: "Actitud de equipo e influencia técnica",
-    description:
-      "Durante mi formación en Wild Code School, asumí de forma natural un papel de apoyo técnico dentro del grupo. A menudo me piden que aclare un razonamiento, diagnostique un bug o proponga un enfoque más legible. Esta postura refleja mi capacidad para tomar perspectiva y facilitar el trabajo colectivo.",
-    icon: gantticon,
-  },
-  {
-    title: "Enfoque de arquitectura y decisiones",
-    description:
-      "Concibo soluciones que sean simples antes de hacerlas escalables. Evito el sobre‑ingeniería, limito las abstracciones prematuras y priorizo decisiones técnicas alineadas con las restricciones reales del proyecto y el nivel del equipo.",
-    icon: archiicon,
-  },
-  {
-    title: "Proyección profesional",
-    description:
-      "Actualmente busco una oportunidad — puesto junior, contrato de formación o prácticas — dentro de un equipo en el que pueda seguir creciendo técnicamente y asumir rápidamente responsabilidades transversales. Mi objetivo es implicarme en proyectos duraderos y aumentar mi impacto con el tiempo.",
-    icon: objectificon,
-  },
-],
+    {
+      title: "Mi trayectoria",
+      description:
+        "Durante casi veinte años como jefe de recepción en la hostelería de alto nivel, ocupé una posición central en entornos de alta presión. Estaba en primera línea para resolver situaciones complejas, tanto técnicas como humanas u organizativas. Esta experiencia me aportó reflejos sólidos: análisis rápido, priorización clara y toma de decisiones pragmática bajo restricciones.",
+      icon: careerIcon,
+    },
+    {
+      title: "Transferencia de competencias al desarrollo",
+      description:
+        "El desarrollo web se impuso como una continuación lógica de este recorrido. Diseñar una aplicación implica estructurar un sistema, anticipar puntos de fragilidad y buscar estabilidad a largo plazo. Es una forma de pensar que siempre he aplicado, ahora a través del código en lugar de procedimientos.",
+      icon: aboutmeicon,
+    },
+    {
+      title: "Espíritu de colaboración",
+      description:
+        "Durante mi formación en la Wild Code School, adopté de manera natural un rol de apoyo técnico dentro del grupo. A menudo se me pide aclarar un razonamiento, identificar el origen de un bug o proponer un enfoque más legible. Esta postura refleja mi capacidad para tomar distancia y contribuir a un trabajo colectivo más fluido.",
+      icon: gantticon,
+    },
+    {
+      title: "Arquitectura clara y sobria",
+      description:
+        "Priorizo soluciones simples y comprensibles antes de buscar escalabilidad u optimización. Evito el sobre-ingeniería, limito las abstracciones prematuras y tomo decisiones técnicas alineadas con las restricciones reales del proyecto y el contexto del equipo.",
+      icon: archiicon,
+    },
+    {
+      title: "Objetivo actual",
+      description:
+        "Actualmente busco una oportunidad - puesto junior, contrato de formación o prácticas - en un entorno que me permita aprender, practicar de forma constante y reforzar mis competencias técnicas. Deseo evolucionar en un equipo donde la calidad, la claridad y la transmisión de conocimientos sean prioritarias, y participar en proyectos con una visión a largo plazo.",
+      icon: objectificon,
+    },
+  ],
 };
-
-
-
 
 export const contactData = {
   title: {
