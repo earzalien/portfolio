@@ -1,17 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="public/assets/icon.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/icon.png" />
+
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Kevin Ressegaire | Développeur Web Full-Stack</title>
     <meta
       name="description"
-      content="Kevin Ressegaire's Portfolio"
+      content="Portfolio de Kevin Ressegaire, développeur web full-stack spécialisé en React, TypeScript et Node.js. Projets, compétences et contact."
     />
-    <title>Kevin Ressegaire | Portfolio</title>
+    <meta
+      name="keywords"
+      content="Kevin Ressegaire, développeur web, full-stack, React, TypeScript, Node.js, portfolio, Montélimar"
+    />
+    <meta name="author" content="Kevin Ressegaire" />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://portfolio-ressegaire-kevin.vercel.app/"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Kevin Ressegaire | Développeur Web Full-Stack"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio de Kevin Ressegaire, développeur web full-stack spécialisé en React, TypeScript et Node.js."
+    />
+    <meta
+      property="og:url"
+      content="https://portfolio-ressegaire-kevin.vercel.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://portfolio-ressegaire-kevin.vercel.app/assets/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Kevin Ressegaire – Développeur Web Full-Stack"
+    />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Kevin Ressegaire Portfolio" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Kevin Ressegaire | Développeur Web Full-Stack"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio de Kevin Ressegaire, développeur web full-stack spécialisé en React, TypeScript et Node.js."
+    />
+    <meta
+      name="twitter:image"
+      content="https://portfolio-ressegaire-kevin.vercel.app/assets/og-image.png"
+    />
+    <!-- <meta name="twitter:site" content="@TON_HANDLE_X" /> -->
+
+    <!-- Hreflang -->
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="https://portfolio-ressegaire-kevin.vercel.app/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://portfolio-ressegaire-kevin.vercel.app/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="https://portfolio-ressegaire-kevin.vercel.app/?lang=es"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://portfolio-ressegaire-kevin.vercel.app/"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://portfolio-ressegaire-kevin.vercel.app/#website",
+            "url": "https://portfolio-ressegaire-kevin.vercel.app/",
+            "name": "Kevin Ressegaire Portfolio",
+            "inLanguage": ["fr", "en", "es"]
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://portfolio-ressegaire-kevin.vercel.app/#profile",
+            "url": "https://portfolio-ressegaire-kevin.vercel.app/",
+            "inLanguage": "fr",
+            "mainEntity": {
+              "@id": "https://portfolio-ressegaire-kevin.vercel.app/#kevin-ressegaire"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://portfolio-ressegaire-kevin.vercel.app/#kevin-ressegaire",
+            "name": "Kevin Ressegaire",
+            "jobTitle": "Développeur Web Full-Stack",
+            "description": "Développeur web full-stack spécialisé en React, TypeScript et Node.js.",
+            "url": "https://portfolio-ressegaire-kevin.vercel.app/",
+            "image": "https://portfolio-ressegaire-kevin.vercel.app/assets/profile.jpg",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Montélimar",
+              "addressRegion": "Auvergne-Rhône-Alpes",
+              "addressCountry": "FR"
+            },
+            "knowsAbout": [
+              "React",
+              "TypeScript",
+              "Node.js",
+              "SQL",
+              "API REST"
+            ],
+            "sameAs": [
+              "https://github.com/earzalien",
+              "https://www.linkedin.com/in/kevin-ressegaire/"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <noscript>
+      <h1>Kevin Ressegaire - Développeur Web Full-Stack</h1>
+      <p>
+        Portfolio présentant des projets en React, TypeScript et Node.js.
+      </p>
+    </noscript>
   </body>
 </html>

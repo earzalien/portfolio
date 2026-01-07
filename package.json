@@ -7,8 +7,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "browserslist:update": "npx update-browserslist-db@latest"
   },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@motionone/utils": "^10.16.3",
@@ -19,6 +25,7 @@
     "finaleseite2": "file:",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
+    "path": "^0.12.7",
     "prism-react-renderer": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
