@@ -332,7 +332,7 @@ export const sideBarLeftSocials = [
     altimgname: "github",
   },
   {
-    link: `#contact`,
+    link: `/#contact`,
     icon: FiMail,
     altimgname: "mail",
   },
