@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 interface ButtonProps {
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   label?: string;
   value?: string;
   className?: string;
