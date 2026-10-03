@@ -88,7 +88,7 @@ const HeaderIntro: React.FC = () => {
 
       <h2 className="text-center">{subtitle}</h2>
 
-      <p className="w-1/2 text-center max-lg:w-full">
+      <p className="w-1/2 text-center max-lg:w-full whitespace-pre-line">
         {description}
       </p>
 

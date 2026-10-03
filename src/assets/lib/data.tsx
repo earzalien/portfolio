@@ -44,9 +44,9 @@ export const headerIntroData = {
     es: "Un Desarrollador Apasionado",
   },
   description: {
-    fr: "Développeur full-stack basé à Valencia — vos idées prennent forme, vos projets prennent vie.",
-    en: "Full-stack developer based in Valencia — turning your ideas into projects that come to life.",
-    es: "Desarrollador full-stack con base en Valencia — convirtiendo tus ideas en proyectos que cobran vida.",
+    fr: "Développeur full-stack basé à Valencia, Venezuela",
+    en: "Full-stack developer based in Valencia, Venezuela",
+    es: "Desarrollador full-stack con base en Valencia, Venezuela",
   },
   buttons: [
     {
