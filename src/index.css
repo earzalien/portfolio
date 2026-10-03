@@ -533,6 +533,14 @@ a {
 .language-switch-buttons img {
   width: 40px;
 }
+@media (max-width: 1024px) {
+  .language-switch-buttons img {
+    width: 28px;
+  }
+  .btn-lang {
+    padding: 0.25rem 0.5rem;
+  }
+}
 
 .nav-item-fixed {
   display: inline-block;
