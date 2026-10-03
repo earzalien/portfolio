@@ -381,7 +381,7 @@ export const aboutMeData = {
     {
       title: "Esprit d'entraide",
       description:
-        "Lors de ma formation à la Wild Code School, j'ai naturellement adopté une posture de soutien technique au sein du groupe. Il m'arrive régulièrement d'être sollicité pour clarifier un raisonnement, comprendre l'origine d'un bug ou proposer une approche plus lisible. Cette position reflète ma capacité à prendre du recul et à contribuer à un travail collectif plus fluide.",
+        "J'ai naturellement adopté une posture de soutien technique au sein des équipes avec lesquelles je travaille. Sollicité pour clarifier un raisonnement, comprendre l'origine d'un bug ou proposer une approche plus lisible, je prends du recul et contribue à un travail collectif plus fluide.",
       icon: gantticon,
     },
     {
@@ -414,7 +414,7 @@ export const aboutMeData = {
     {
       title: "Collaborative mindset",
       description:
-        "During my training at Wild Code School, I naturally took on a technical support role within the group. I am often asked to clarify reasoning, identify the source of a bug or suggest a more readable approach. This reflects my ability to step back and contribute to smoother collective work.",
+        "I naturally took on a technical support role within the teams I work with. Often asked to clarify reasoning, identify the source of a bug or suggest a more readable approach, I step back and contribute to smoother collective work.",
       icon: gantticon,
     },
     {
@@ -447,7 +447,7 @@ export const aboutMeData = {
     {
       title: "Espíritu de colaboración",
       description:
-        "Durante mi formación en la Wild Code School, adopté de manera natural un rol de apoyo técnico dentro del grupo. A menudo se me pide aclarar un razonamiento, identificar el origen de un bug o proponer un enfoque más legible. Esta postura refleja mi capacidad para tomar distancia y contribuir a un trabajo colectivo más fluido.",
+        "Adopté de manera natural un rol de apoyo técnico dentro de los equipos con los que trabajo. A menudo se me pide aclarar un razonamiento, identificar el origen de un bug o proponer un enfoque más legible. Tomo distancia y contribuyo a un trabajo colectivo más fluido.",
       icon: gantticon,
     },
     {
