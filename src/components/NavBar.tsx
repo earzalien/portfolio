@@ -18,6 +18,10 @@ const NavBar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (window.innerWidth <= 1024) {
+        setIsSticky(false);
+        return;
+      }
       const scrollY = window.scrollY;
       const threshold = window.outerHeight * 0.1;
       setIsSticky(scrollY >= threshold);
