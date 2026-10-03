@@ -26,7 +26,12 @@ const ProjectSlider: React.FC = () => {
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
-  const notifyServerRequest = () => {
+  const notifyServerRequest = (
+    event: React.MouseEvent<HTMLElement>,
+    url: string
+  ) => {
+    event.preventDefault();
+
     if (language === "FR") {
       toast.info(toastMessages.loadingProject.fr);
     } else if (language === "ES") {
@@ -34,6 +39,8 @@ const ProjectSlider: React.FC = () => {
     } else {
       toast.info(toastMessages.loadingProject.en);
     }
+
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   const isFR = language === "FR";
@@ -158,7 +165,9 @@ const ProjectSlider: React.FC = () => {
                         iconSVG={project.deploymenticon}
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
-                        onClick={notifyServerRequest}
+                        onClick={(event: React.MouseEvent<HTMLElement>) =>
+                          notifyServerRequest(event, project.deploymenturl)
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                       />
@@ -204,7 +213,9 @@ const ProjectSlider: React.FC = () => {
                     iconSVG={project.deploymenticon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
-                    onClick={notifyServerRequest}
+                    onClick={(event: React.MouseEvent<HTMLElement>) =>
+                      notifyServerRequest(event, project.deploymenturl)
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                   />
