@@ -393,7 +393,7 @@ export const aboutMeData = {
     {
       title: "Objectif actuel",
       description:
-        "Je recherche aujourd'hui une opportunité - poste junior, alternance ou stage - dans un cadre qui me permette d'apprendre, de pratiquer régulièrement et de renforcer mes compétences techniques. Basé à Valencia (Venezuela), je travaille à distance, pleinement disponible pour collaborer avec une équipe française. Je souhaite évoluer dans une équipe où la qualité, la clarté et la transmission priment, afin de progresser sereinement et de m'inscrire dans des projets sur le long terme.",
+        "Développeur full-stack, plusieurs applications livrées en production (dont labdentalerika.com). Je recherche un poste à distance, sans contrainte de fuseau, avec une organisation pensée pour l'asynchrone : livrer un résultat fiable, documenté et évolutif, quelle que soit l'équipe.",
       icon: objectificon,
     },
   ],
@@ -426,7 +426,7 @@ export const aboutMeData = {
     {
       title: "Current objective",
       description:
-        "I am currently looking for an opportunity - junior position, apprenticeship or internship - in an environment that allows me to learn, practice consistently and strengthen my technical skills. Based in Valencia (Venezuela), I work remotely and am fully available to collaborate with a French team. I want to grow within a team where quality, clarity and knowledge sharing matter, and to contribute to projects with a long-term perspective.",
+        "Full-stack developer with several production applications under my belt (including labdentalerika.com). I'm looking for a remote role with no timezone constraints, organized around async work: delivering reliable, documented and maintainable results, whatever the team.",
       icon: objectificon,
     },
   ],
@@ -459,7 +459,7 @@ export const aboutMeData = {
     {
       title: "Objetivo actual",
       description:
-        "Actualmente busco una oportunidad - puesto junior, contrato de formación o prácticas - en un entorno que me permita aprender, practicar de forma constante y reforzar mis competencias técnicas. Con base en Valencia (Venezuela), trabajo de forma remota y estoy plenamente disponible para colaborar con un equipo francés. Deseo evolucionar en un equipo donde la calidad, la claridad y la transmisión de conocimientos sean prioritarias, y participar en proyectos con una visión a largo plazo.",
+        "Desarrollador full-stack con varias aplicaciones en producción (incluida labdentalerika.com). Busco un puesto remoto sin restricción de huso horario, con una organización pensada para el trabajo asíncrono: entregar resultados fiables, documentados y evolutivos, sin importar el equipo.",
       icon: objectificon,
     },
   ],
