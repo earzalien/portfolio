@@ -2,11 +2,12 @@ import bannerBg from "../assets/img/bannerbg.webp";
 import React, { useRef } from "react";
 import Button from "./Button";
 import LiveTicker from "./ParallaxText";
-import { projectsData, toastMessages } from "../assets/lib/data";
+import { projectsData, toastMessages, privateCodeLabel } from "../assets/lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
 import { ToastContainer, toast } from "react-toastify";
 import { Tooltip as ReactTooltip } from "react-tooltip";
+import { FiLock } from "react-icons/fi";
 import { useSectionInView } from "../assets/lib/hooks";
 import { useLanguage } from "../context/language-context";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -45,6 +46,12 @@ const ProjectSlider: React.FC = () => {
 
   const isFR = language === "FR";
   const isES = language === "ES";
+
+  const privateLabel = isFR
+    ? privateCodeLabel.fr
+    : isES
+    ? privateCodeLabel.es
+    : privateCodeLabel.en;
 
   return (
     <React.Fragment>
@@ -171,15 +178,22 @@ const ProjectSlider: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       />
-                      <Button
-                        label="Github Repository"
-                        link={project.githuburl}
-                        iconSVG={project.githubicon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
+                      {project.isPrivate ? (
+                        <span className="flex flex-row gap-4 justify-center items-center text-white drop-shadow-2xl border border-white/40 py-4 px-8 rounded-lg text-[1.6rem] w-max max-lg:text-3xl max-lg:py-8 max-lg:px-16 max-lg:rounded-xl">
+                          <FiLock className="w-max h-8" />
+                          {privateLabel}
+                        </span>
+                      ) : (
+                        <Button
+                          label="Github Repository"
+                          link={project.githuburl}
+                          iconSVG={project.githubicon}
+                          buttoncolor={project.colors.main}
+                          iconcolor={project.colors.icon}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        />
+                      )}
                     </div>
                   </div>
 
@@ -219,15 +233,22 @@ const ProjectSlider: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   />
-                  <Button
-                    label="Github Repository"
-                    link={project.githuburl}
-                    iconSVG={project.githubicon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
+                  {project.isPrivate ? (
+                    <span className="flex flex-row gap-4 justify-center items-center text-white drop-shadow-2xl border border-white/40 py-4 px-8 rounded-lg text-[1.6rem] w-max max-lg:text-3xl max-lg:py-8 max-lg:px-16 max-lg:rounded-xl">
+                      <FiLock className="w-max h-8" />
+                      {privateLabel}
+                    </span>
+                  ) : (
+                    <Button
+                      label="Github Repository"
+                      link={project.githuburl}
+                      iconSVG={project.githubicon}
+                      buttoncolor={project.colors.main}
+                      iconcolor={project.colors.icon}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    />
+                  )}
                 </div>
                 <p className="text-white max-lg:text-4xl">
                   {isFR
