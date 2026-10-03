@@ -1,0 +1,35 @@
+dist/assets/index-DMuYf9Qy.css
+  s_7414324a2b8031::t_b5f000990c60cc 1
+vercel.json
+  s_7414324a2b8031::t_19d017c188dca2 5-16
+  s_7414324a2b8031::t_020732021c077a 3-4,17-28
+src/assets/lib/data.tsx
+  s_7414324a2b8031::t_82a1ec3d9a7f3a 119
+  s_7414324a2b8031::t_cc9f7b4f915bda 462
+  s_7414324a2b8031::t_e5f1b646d4918e 584-586
+  s_7414324a2b8031::t_f3aafbb5e41e79 396
+  s_7414324a2b8031::t_1fb46b32ca19af 47-49
+  s_7414324a2b8031::t_2a77c71794ca4a 429
+index.html
+  s_7414324a2b8031::t_2dfeb4d1aa42e6 11-12,15,20-22,32-33,37-40
+  s_7414324a2b8031::t_6ede087f0a2900 49-50,56-57,60,65,68-70,73-75
+dist/index.html
+  s_7414324a2b8031::t_b5f000990c60cc 11-12,15,20-22,32-33,37-40,49-50,56-57,60,65,68-70,73-75,98
+  s_7414324a2b8031::t_ca6c4169055ff3 92
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "931209e58e0fb94a3c1df03219a18105f0899218",
+  "prompts": {},
+  "sessions": {
+    "s_7414324a2b8031": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f0224b796ffePBCqfNSo9mTd7q",
+        "model": "unknown"
+      },
+      "human_author": "kress <earzalien@users.noreply.github.com>"
+    }
+  }
+}
