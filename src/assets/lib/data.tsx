@@ -44,9 +44,9 @@ export const headerIntroData = {
     es: "Un Desarrollador Apasionado",
   },
   description: {
-    fr: "",
-    en: "",
-    es: "",
+    fr: "Développeur full-stack basé à Valencia — vos idées prennent forme, vos projets prennent vie.",
+    en: "Full-stack developer based in Valencia — turning your ideas into projects that come to life.",
+    es: "Desarrollador full-stack con base en Valencia — convirtiendo tus ideas en proyectos que cobran vida.",
   },
   buttons: [
     {
@@ -116,7 +116,7 @@ export const projectsData = [
       { name: "CSS", icon: cssicon },
     ],
     image: portfoliopreview,
-    deploymenturl: "https://portfolio-ressegaire-kevin.vercel.app/",
+    deploymenturl: "https://portfolio.ressegaire.com/",
     githuburl: "https://github.com/earzalien/portfolio-v2",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -393,7 +393,7 @@ export const aboutMeData = {
     {
       title: "Objectif actuel",
       description:
-        "Je recherche aujourd'hui une opportunité - poste junior, alternance ou stage - dans un cadre qui me permette d'apprendre, de pratiquer régulièrement et de renforcer mes compétences techniques. Je souhaite évoluer dans une équipe où la qualité, la clarté et la transmission priment, afin de progresser sereinement et de m'inscrire dans des projets sur le long terme.",
+        "Je recherche aujourd'hui une opportunité - poste junior, alternance ou stage - dans un cadre qui me permette d'apprendre, de pratiquer régulièrement et de renforcer mes compétences techniques. Basé à Valencia (Venezuela), je travaille à distance, pleinement disponible pour collaborer avec une équipe française. Je souhaite évoluer dans une équipe où la qualité, la clarté et la transmission priment, afin de progresser sereinement et de m'inscrire dans des projets sur le long terme.",
       icon: objectificon,
     },
   ],
@@ -426,7 +426,7 @@ export const aboutMeData = {
     {
       title: "Current objective",
       description:
-        "I am currently looking for an opportunity - junior position, apprenticeship or internship - in an environment that allows me to learn, practice consistently and strengthen my technical skills. I want to grow within a team where quality, clarity and knowledge sharing matter, and to contribute to projects with a long-term perspective.",
+        "I am currently looking for an opportunity - junior position, apprenticeship or internship - in an environment that allows me to learn, practice consistently and strengthen my technical skills. Based in Valencia (Venezuela), I work remotely and am fully available to collaborate with a French team. I want to grow within a team where quality, clarity and knowledge sharing matter, and to contribute to projects with a long-term perspective.",
       icon: objectificon,
     },
   ],
@@ -459,7 +459,7 @@ export const aboutMeData = {
     {
       title: "Objetivo actual",
       description:
-        "Actualmente busco una oportunidad - puesto junior, contrato de formación o prácticas - en un entorno que me permita aprender, practicar de forma constante y reforzar mis competencias técnicas. Deseo evolucionar en un equipo donde la calidad, la claridad y la transmisión de conocimientos sean prioritarias, y participar en proyectos con una visión a largo plazo.",
+        "Actualmente busco una oportunidad - puesto junior, contrato de formación o prácticas - en un entorno que me permita aprender, practicar de forma constante y reforzar mis competencias técnicas. Con base en Valencia (Venezuela), trabajo de forma remota y estoy plenamente disponible para colaborar con un equipo francés. Deseo evolucionar en un equipo donde la calidad, la claridad y la transmisión de conocimientos sean prioritarias, y participar en proyectos con una visión a largo plazo.",
       icon: objectificon,
     },
   ],
@@ -581,9 +581,9 @@ export const toastMessages = {
     es: "🦄 Gracias por tu email. Te responderé lo antes posible.",
   },
   failedEmailSent: {
-    fr: "🦄 L'envoi de votre email n'a pas fonctionné. Veuillez réessayer plus tard ou écrire à [kevin.ressegaire@gmail.com](mailto:kevin.ressegaire@gmail.com).",
-    en: "🦄 Unfortunately the sending of your email did not work. Please try again later or email [kevin.ressegaire@gmail.com](mailto:kevin.ressegaire@gmail.com).",
-    es: "🦄 El envío de tu email no funcionó. Inténtalo de nuevo más tarde o escribe a [kevin.ressegaire@gmail.com](mailto:kevin.ressegaire@gmail.com).",
+    fr: "🦄 L'envoi de votre email n'a pas fonctionné. Veuillez réessayer plus tard ou écrire à [kevin@ressegaire.com](mailto:kevin@ressegaire.com).",
+    en: "🦄 Unfortunately the sending of your email did not work. Please try again later or email [kevin@ressegaire.com](mailto:kevin@ressegaire.com).",
+    es: "🦄 El envío de tu email no funcionó. Inténtalo de nuevo más tarde o escribe a [kevin@ressegaire.com](mailto:kevin@ressegaire.com).",
   },
   failedValidationName: {
     fr: "Veuillez entrer votre nom",
