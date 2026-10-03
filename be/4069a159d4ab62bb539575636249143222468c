@@ -1,0 +1,21 @@
+src/components/NavBar.tsx
+  s_7414324a2b8031::t_36242df6d5cd40 21-24
+src/components/theme-switch.tsx
+  s_7414324a2b8031::t_f3f203b400d60f 35-36,58-77,79-95,97-115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "be4069a159d4ab62bb539575636249143222468c",
+  "prompts": {},
+  "sessions": {
+    "s_7414324a2b8031": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f0224b796ffePBCqfNSo9mTd7q",
+        "model": "unknown"
+      },
+      "human_author": "kress <earzalien@users.noreply.github.com>"
+    }
+  }
+}
