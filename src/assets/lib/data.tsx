@@ -91,7 +91,7 @@ export const projectsData = [
     ],
     image: labdentalpreview,
     deploymenturl: "https://labdentalerika.com",
-    githuburl: "https://github.com/earzalien",
+    isPrivate: true,
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -117,7 +117,7 @@ export const projectsData = [
     ],
     image: grattecielpreview,
     deploymenturl: "https://generationgratteciel.fr",
-    githuburl: "https://github.com/earzalien",
+    isPrivate: true,
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -131,11 +131,11 @@ export const projectsData = [
   {
     title: "CineMood",
     description:
-      "Application de recommandations de films. Démarrée en formation, elle a été enrichie ensuite avec un backend complet pour la gestion des données et des sessions — un projet que je continue de faire évoluer en autonomie.",
+      "Application de recommandations de films. Démarrée en formation, elle a ensuite été enrichie d'un backend complet pour la gestion des données et des sessions. Un projet que je continue de faire évoluer en autonomie.",
     description_EN:
-      "Movie recommendation application. Started during my training, it was then enriched with a full backend for data and session management — a project I keep evolving on my own.",
+      "Movie recommendation application. Started during my training, it was then enriched with a full backend for data and session management. A project I keep evolving on my own.",
     description_ES:
-      "Aplicación de recomendación de películas. Comenzada en formación, fue enriquecida después con un backend completo para la gestión de datos y sesiones — un proyecto que sigo haciendo evolucionar de forma autónoma.",
+      "Aplicación de recomendación de películas. Comenzada en formación, fue enriquecida después con un backend completo para la gestión de datos y sesiones. Un proyecto que sigo haciendo evolucionar de forma autónoma.",
     technologies: [
       { name: "JavaScript", icon: javascripticon },
       { name: "TypeScript", icon: typescripticon },
@@ -144,6 +144,7 @@ export const projectsData = [
     ],
     image: cinemoodpreview,
     deploymenturl: "https://cinemood.ressegaire.com/",
+    isPrivate: false,
     githuburl: "https://github.com/earzalien/cinemoodV2",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -171,6 +172,7 @@ export const projectsData = [
     ],
     image: portfoliopreview,
     deploymenturl: "https://portfolio.ressegaire.com/",
+    isPrivate: false,
     githuburl: "https://github.com/earzalien/portfolio-v2",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -189,6 +191,12 @@ export const liveTickerData = {
     en: "More Projects on GitHub",
     es: "Más proyectos en GitHub",
   },
+} as const;
+
+export const privateCodeLabel = {
+  fr: "Code privé (projet client)",
+  en: "Private code (client project)",
+  es: "Código privado (proyecto de cliente)",
 } as const;
 
 export const skillsDataWeb = [
