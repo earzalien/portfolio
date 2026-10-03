@@ -1,0 +1,21 @@
+src/assets/lib/data.tsx
+  s_7414324a2b8031::t_e0556a1bfea1a8 417
+  s_7414324a2b8031::t_2b2227dcd75b41 384
+  s_7414324a2b8031::t_b99f8c5e2fa219 450
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "44718e88a6c67a5cf3835c4556805a8d0eceb505",
+  "prompts": {},
+  "sessions": {
+    "s_7414324a2b8031": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f0224b796ffePBCqfNSo9mTd7q",
+        "model": "unknown"
+      },
+      "human_author": "kress <earzalien@users.noreply.github.com>"
+    }
+  }
+}
