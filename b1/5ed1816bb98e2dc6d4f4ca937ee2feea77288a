@@ -1,0 +1,29 @@
+src/components/ProjectSlider.tsx
+  s_7414324a2b8031::t_69ec689a1cf8fb 50-55
+  s_7414324a2b8031::t_dfc8bee5204663 5,10
+  s_7414324a2b8031::t_bfd6eca76cd1c6 181-196
+  s_7414324a2b8031::t_a265359c89aea0 236-251
+src/assets/lib/data.tsx
+  s_7414324a2b8031::t_e5a3252e3c20d1 134,136,138
+  s_7414324a2b8031::t_bfa6f6b711d002 175
+  s_7414324a2b8031::t_a57c5b39c10e69 147
+  s_7414324a2b8031::t_c468a92fc7cf35 196-201
+  s_7414324a2b8031::t_55652222a7ece5 94
+  s_7414324a2b8031::t_61cad5d1737db8 120
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b15ed1816bb98e2dc6d4f4ca937ee2feea77288a",
+  "prompts": {},
+  "sessions": {
+    "s_7414324a2b8031": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f0224b796ffePBCqfNSo9mTd7q",
+        "model": "unknown"
+      },
+      "human_author": "kress <earzalien@users.noreply.github.com>"
+    }
+  }
+}
