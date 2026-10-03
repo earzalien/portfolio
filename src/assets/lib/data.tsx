@@ -26,7 +26,8 @@ import hemangicon2 from "../../assets/img/kevin-ressegaire.png"
 import cinemoodpreview from "../../assets/icons/cinemood.png"
 import objectificon from "../../assets/icons/objectif.png"
 import portfoliopreview from "../../assets/icons/portfolio.png"
-import railpreview from "../../assets/icons/rmc04.png"
+import labdentalpreview from "../../assets/img/projects/labdentalerika.png"
+import grattecielpreview from "../../assets/img/projects/generationgratteciel.png"
 import phpicom from "../../assets/icons/php.png";
 import postgresqlicon from "../../assets/icons/postgre.png";
 import mysqlicon from "../../assets/icons/mysql.png";
@@ -75,13 +76,66 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
+    title: "LabDentalErika",
+    description:
+      "Plateforme web complète pour un cabinet dentaire : gestion de l'activité, suivi des patients et outils métiers. Conçue, développée et mise en production de bout en bout, de la prise de brief à l'hébergement et la maintenance.",
+    description_EN:
+      "Complete web platform for a dental practice: activity management, patient tracking and business tools. Designed, built and deployed end-to-end, from brief to hosting and maintenance.",
+    description_ES:
+      "Plataforma web completa para una clínica dental: gestión de actividad, seguimiento de pacientes y herramientas profesionales. Diseñada, desarrollada y puesta en producción de principio a fin, desde la toma de requisitos hasta el hosting y el mantenimiento.",
+    technologies: [
+      { name: "TypeScript", icon: typescripticon },
+      { name: "ReactJS", icon: reacticon },
+      { name: "NodeJS", icon: nodejsicon },
+      { name: "PostgreSQL", icon: postgresqlicon },
+    ],
+    image: labdentalpreview,
+    deploymenturl: "https://labdentalerika.com",
+    githuburl: "https://github.com/earzalien",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
+
+  {
+    title: "Génération Gratte-Ciel",
+    description:
+      "Site vitrine en production pour le projet Génération Gratte-Ciel. Développement complet : design, contenu, intégration responsive et déploiement, avec une attention portée à la performance et au référencement.",
+    description_EN:
+      "Production showcase website for the Génération Gratte-Ciel project. Full development: design, content, responsive integration and deployment, with a focus on performance and SEO.",
+    description_ES:
+      "Sitio web de presentación en producción para el proyecto Génération Gratte-Ciel. Desarrollo completo: diseño, contenido, integración responsive y despliegue, con atención al rendimiento y al SEO.",
+    technologies: [
+      { name: "TypeScript", icon: typescripticon },
+      { name: "ReactJS", icon: reacticon },
+      { name: "NodeJS", icon: nodejsicon },
+    ],
+    image: grattecielpreview,
+    deploymenturl: "https://generationgratteciel.fr",
+    githuburl: "https://github.com/earzalien",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#FFD5BD",
+    },
+  },
+
+  {
     title: "CineMood",
     description:
-      "Application web de recommandations de films réalisée dans le cadre de ma formation. Le projet met l'accent sur l'expérience utilisateur, la gestion des états, la séparation front/back et l'intégration d'APIs externes dans une architecture maintenable.",
+      "Application de recommandations de films. Démarrée en formation, elle a été enrichie ensuite avec un backend complet pour la gestion des données et des sessions — un projet que je continue de faire évoluer en autonomie.",
     description_EN:
-      "Movie recommendation web application built as a training project. The project emphasizes user experience, state management, front/back separation and external API integration within a maintainable architecture.",
+      "Movie recommendation application. Started during my training, it was then enriched with a full backend for data and session management — a project I keep evolving on my own.",
     description_ES:
-      "Aplicación web de recomendación de películas desarrollada como proyecto de formación. El proyecto pone el foco en la experiencia de usuario, la gestión de estados, la separación front/back y la integración de APIs externas.",
+      "Aplicación de recomendación de películas. Comenzada en formación, fue enriquecida después con un backend completo para la gestión de datos y sesiones — un proyecto que sigo haciendo evolucionar de forma autónoma.",
     technologies: [
       { name: "JavaScript", icon: javascripticon },
       { name: "TypeScript", icon: typescripticon },
@@ -89,8 +143,8 @@ export const projectsData = [
       { name: "ReactJS", icon: reacticon },
     ],
     image: cinemoodpreview,
-    deploymenturl: "https://cinemood-ebon.vercel.app/",
-    githuburl: "https://github.com/earzalien/cinemood",
+    deploymenturl: "https://cinemood.ressegaire.com/",
+    githuburl: "https://github.com/earzalien/cinemoodV2",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -125,32 +179,6 @@ export const projectsData = [
       second: "secondary-btn",
       icon: "white",
       projectcolor: "#FFD5BD",
-    },
-  },
-
-  {
-    title: "RMC04",
-    description:
-      "Application web développée pour le club Rail Model Club 04 dans un contexte professionnel. Le projet répond à un besoin client réel, avec prise de brief, définition des fonctionnalités, développement itératif et mise en production.",
-    description_EN:
-      "Web application developed for the Rail Model Club 04 in a professional context. The project addresses a real client need, including brief collection, feature definition, iterative development and production deployment.",
-    description_ES:
-      "Aplicación web desarrollada para el Rail Model Club 04 en un contexto profesional. El proyecto responde a una necesidad real del cliente, con toma de requisitos, definición de funcionalidades, desarrollo iterativo y despliegue en producción.",
-    technologies: [
-      { name: "TypeScript", icon: typescripticon },
-      { name: "ReactJS", icon: reacticon },
-      { name: "NodeJS", icon: nodejsicon },
-    ],
-    image: railpreview, 
-    deploymenturl: "https://rail-model-club-haute-provence.vercel.app/",
-    githuburl: "https://github.com/earzalien/train-manosque",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#9ECF8C",
     },
   },
 ] as const;
