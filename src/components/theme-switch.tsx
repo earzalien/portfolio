@@ -32,6 +32,8 @@ export default function ThemeSwitch() {
 
   const themeBg = theme === "dark" ? "bg-[--darkblue]" : "bg-white";
 
+  const isMobileOnly = isMobile;
+
   return (
     <div
       className={`
@@ -53,59 +55,64 @@ export default function ThemeSwitch() {
         {theme === "light" ? <BsSun /> : <BsMoon />}
       </button>
 
-      {/* Github */}
-      <button
-        className={`
-          ${baseBtn} ${themeBg}
-          right-10
-          ${isMobile ? "top-32" : "bottom-[6rem]"}
-        `}
-        aria-label="My Github Profile"
-      >
-        <Link
-          to={sideBarLeftSocials[1].link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BsGithub />
-        </Link>
-      </button>
+      {/* Github / Linkedin / Email : desktop uniquement */}
+      {!isMobileOnly && (
+        <>
+          {/* Github */}
+          <button
+            className={`
+              ${baseBtn} ${themeBg}
+              right-10
+              bottom-[6rem]
+            `}
+            aria-label="My Github Profile"
+          >
+            <Link
+              to={sideBarLeftSocials[1].link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsGithub />
+            </Link>
+          </button>
 
-      {/* Linkedin */}
-      <button
-        className={`
-          ${baseBtn} ${themeBg}
-          right-10
-          ${isMobile ? "top-52" : "bottom-[11rem]"}
-        `}
-        aria-label="My Linkedin Profile"
-      >
-        <Link
-          to={sideBarLeftSocials[0].link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BsLinkedin />
-        </Link>
-      </button>
+          {/* Linkedin */}
+          <button
+            className={`
+              ${baseBtn} ${themeBg}
+              right-10
+              bottom-[11rem]
+            `}
+            aria-label="My Linkedin Profile"
+          >
+            <Link
+              to={sideBarLeftSocials[0].link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLinkedin />
+            </Link>
+          </button>
 
-      {/* Email */}
-      <button
-        className={`
-          ${baseBtn} ${themeBg}
-          right-10
-          ${isMobile ? "top-72" : "bottom-[16rem]"}
-        `}
-        aria-label="Send me an Email"
-      >
-        <Link
-          to={sideBarLeftSocials[2].link}
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <BsFillEnvelopeAtFill />
-        </Link>
-      </button>
+          {/* Email */}
+          <button
+            className={`
+              ${baseBtn} ${themeBg}
+              right-10
+              bottom-[16rem]
+            `}
+            aria-label="Send me an Email"
+          >
+            <Link
+              to={sideBarLeftSocials[2].link}
+              target="_self"
+              rel="noopener noreferrer"
+            >
+              <BsFillEnvelopeAtFill />
+            </Link>
+          </button>
+        </>
+      )}
     </div>
   );
 }
