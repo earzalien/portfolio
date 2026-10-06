@@ -1,0 +1,21 @@
+src/components/HeaderIntro.tsx
+  s_7414324a2b8031::t_73b2b50662e907 19,21-22
+src/assets/lib/data.tsx
+  s_7414324a2b8031::t_18adac6bf9cb73 108,110,112,117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "54e91d598c911e46c4fd12cf7f14488224d7920f",
+  "prompts": {},
+  "sessions": {
+    "s_7414324a2b8031": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f0224b796ffePBCqfNSo9mTd7q",
+        "model": "unknown"
+      },
+      "human_author": "kress <earzalien@users.noreply.github.com>"
+    }
+  }
+}
