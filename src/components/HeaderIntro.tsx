@@ -16,10 +16,10 @@ const HeaderIntro: React.FC = () => {
   const handleCvClick = async () => {
     const url =
       language === "FR"
-        ? "/cv_fr.pdf"
+        ? "/Kevin-Ressegaire-CV-FR.pdf"
         : language === "ES"
-        ? "/cv_es.pdf"
-        : "/cv_en.pdf";
+        ? "/Kevin-Ressegaire-CV-ES.pdf"
+        : "/Kevin-Ressegaire-CV-EN.pdf";
 
     try {
       const res = await fetch(url, {
