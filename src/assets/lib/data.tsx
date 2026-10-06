@@ -105,15 +105,16 @@ export const projectsData = [
   {
     title: "Génération Gratte-Ciel",
     description:
-      "Site vitrine en production pour le projet Génération Gratte-Ciel. Développement complet : design, contenu, intégration responsive et déploiement, avec une attention portée à la performance et au référencement.",
+      "Application web privée pour une copropriété : les résidents partagent photos et messages et signalent des incidents. Accès sur invitation, développée et mise en production de bout en bout.",
     description_EN:
-      "Production showcase website for the Génération Gratte-Ciel project. Full development: design, content, responsive integration and deployment, with a focus on performance and SEO.",
+      "Private web application for a residential building: residents share photos and messages and report issues. Invite-only access, designed, built and deployed end-to-end.",
     description_ES:
-      "Sitio web de presentación en producción para el proyecto Génération Gratte-Ciel. Desarrollo completo: diseño, contenido, integración responsive y despliegue, con atención al rendimiento y al SEO.",
+      "Aplicación web privada para una comunidad de vecinos: los residentes comparten fotos y mensajes y reportan incidencias. Acceso solo por invitación, diseñada, desarrollada y puesta en producción de principio a fin.",
     technologies: [
       { name: "TypeScript", icon: typescripticon },
       { name: "ReactJS", icon: reacticon },
       { name: "NodeJS", icon: nodejsicon },
+      { name: "MySQL", icon: mysqlicon },
     ],
     image: grattecielpreview,
     deploymenturl: "https://generationgratteciel.fr",
